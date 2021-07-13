@@ -2,7 +2,7 @@
     <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
         <svg class="c-icon c-icon-lg">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
-        </svg>
+        </svg>Online_Recruiter
     </button><a class="c-header-brand d-lg-none c-header-brand-sm-up-center" href="#">
         <svg width="118" height="46" alt="CoreUI Logo">
             <use xlink:href="assets/brand/coreui-pro.svg#full"></use>
@@ -33,7 +33,7 @@
         <li class="c-header-nav-item dropdown d-md-down-none mx-2"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <svg class="c-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-                </svg><span class="badge badge-pill badge-danger">5</span></a>
+                </svg><span class="badge badge-pill badge-danger">5</span>Notification</a>
             <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">
                 <div class="dropdown-header bg-light"><strong>You have 5 notifications</strong></div><a class="dropdown-item" href="#">
                     <svg class="c-icon mfe-2 text-success">
@@ -69,7 +69,7 @@
         <li class="c-header-nav-item dropdown d-md-down-none mx-2"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <svg class="c-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-list-rich"></use>
-                </svg><span class="badge badge-pill badge-warning">15</span></a>
+                </svg><span class="badge badge-pill badge-warning">15</span>Task</a>
             <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">
                 <div class="dropdown-header bg-light"><strong>You have 5 pending tasks</strong></div><a class="dropdown-item d-block" href="#">
                     <div class="small mb-1">Upgrade NPM &amp; Bower<span class="float-right"><strong>0%</strong></span></div><span class="progress progress-xs">
@@ -97,7 +97,7 @@
         <li class="c-header-nav-item dropdown d-md-down-none mx-2"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <svg class="c-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
-                </svg><span class="badge badge-pill badge-info">7</span></a>
+                </svg><span class="badge badge-pill badge-info">4</span>Message</a>
             <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">
                 <div class="dropdown-header bg-light"><strong>You have 4 messages</strong></div><a class="dropdown-item" href="#">
                     <div class="message">
@@ -191,15 +191,5 @@
             <li class="breadcrumb-item active">Dashboard</li>
 
         </ol>
-        <div class="c-subheader-nav d-md-down-none mfe-2"><a class="c-subheader-nav-link" href="#">
-                <svg class="c-icon">
-                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speech"></use>
-                </svg></a><a class="c-subheader-nav-link" href="#">
-                <svg class="c-icon">
-                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-graph"></use>
-                </svg> &nbsp;Dashboard</a><a class="c-subheader-nav-link" href="#">
-                <svg class="c-icon">
-                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
-                </svg> &nbsp;Settings</a></div>
     </div>
 </header>
