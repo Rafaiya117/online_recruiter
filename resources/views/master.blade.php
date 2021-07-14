@@ -11,8 +11,8 @@
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>CoreUI Pro Bootstrap Admin Template</title>
 
-    <link href="{{url('/css/style.css')}}" rel="stylesheet">
-    <link href="{{url('/css/coreui-chartjs.css')}}" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
     <meta name="robots" content="noindex">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-1"></script>
     <script>
@@ -21,7 +21,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-118965717-1');
     </script></head>
-<body class="c-app c-dark-theme c-no-layout-transition">
+<body class="c-app c-no-layout-transition">
 @include('backend.partials.sidebar')
 <div class="c-sidebar c-sidebar-lg c-sidebar-light c-sidebar-right c-sidebar-overlaid" id="aside">
     <button class="c-sidebar-close c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-show" responsive="true">
@@ -211,7 +211,7 @@
 <div class="c-wrapper">
    @include('backend.partials.header')
     <div class="c-body">
-       @include('backend.partials.main')
+
     </div>
     <footer class="c-footer">
         <div><a href="https://coreui.io">CoreUI</a> © 2020 creativeLabs.</div>
@@ -219,14 +219,14 @@
     </footer>
 </div>
 
-<script src="{{url('/js/coreui.bundle.min.js')}}"></script>
+<script src="vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
 <!--[if IE]><!-->
-<script src="{{url('/js/svgxuse.min.js')}}"></script>
+<script src="vendors/@coreui/icons/js/svgxuse.min.js"></script>
 <!--<![endif]-->
 
-<script src="{{url('/js/coreui-chartjs.bundle.js')}}"></script>
-<script src="{{url('/js/coreui-utils.js')}}"></script>
-<script src="{{url('/js/main.js')}}"></script>
+<script src="vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js"></script>
+<script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+<script src="js/main.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         setTimeout(function() {
