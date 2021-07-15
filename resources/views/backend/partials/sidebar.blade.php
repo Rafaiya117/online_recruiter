@@ -11,36 +11,25 @@
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
-                </svg> Dashboard<span class="badge badge-info">NEW</span></a></li>
-        <li class="c-sidebar-nav-title">Theme</li>
+                </svg> Dashboard<span class="badge badge-info"></span></a></li>
+        <li class="c-sidebar-nav-title">Add Question</li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
-                </svg> Colors</a></li>
+                </svg>Apitude Question</a></li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
-                </svg> Typography</a></li>
-        <li class="c-sidebar-nav-title">Components</li>
+                </svg>Personality Question</a></li>
+        <li class="c-sidebar-nav-title">Organization_Job_Details</li>
         <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-                </svg> Base</a>
+                </svg> ORGANIZATION</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"> Breadcrumb</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/cards.html"> Cards</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/carousel.html"> Carousel</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/collapse.html"> Collapse</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/jumbotron.html"> Jumbotron</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/list-group.html"> List group</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/navs.html"> Navs</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/pagination.html"> Pagination</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/popovers.html"> Popovers</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/progress.html"> Progress</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/scrollspy.html"> Scrollspy</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/switches.html"> Switches</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/tabs.html"> Tabs</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/tooltips.html"> Tooltips</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html">Organization Details</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/cards.html">Job Details</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/carousel.html">Requirement Details</a></li>
             </ul>
         </li>
         <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
