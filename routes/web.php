@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\Backend\QuestionController;
+use App\Http\Controllers\Backend\DetailsController;
 
 
 /*
@@ -17,4 +20,11 @@ use App\Http\Controllers\HomeController;
 
 
 Route::get('/',[HomeController::class,'home']);
+Route::get('/user',[UserController::class, 'user']);
+Route::get('/questions',[QuestionController::class,'apitude'])->name('question.apitude');
+Route::get('/question/personality',[QuestionController::class,'personality'])->name('question.personality');
+Route::get('/details',[DetailsController::class,'job'])->name('details.job');
+Route::get('/details/organization',[DetailsController::class,'organization'])->name('details.organization');
+Route::get('/details/requirement',[DetailsController::class,'requirement'])->name('details.requirement');
+
 

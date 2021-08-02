@@ -2,11 +2,11 @@
     <a href="index.html" class="dash-nav-item">
         <i class="fas fa-home"></i> Dashboard </a>
     <div class="dash-nav-dropdown">
-        <a href="#!" class="dash-nav-item dash-nav-dropdown-toggle">
+        <a href="#" class="dash-nav-item dash-nav-dropdown-toggle">
             <i class="fas fa-file"></i> Question </a>
         <div class="dash-nav-dropdown-menu">
-            <a href="chartjs.html" class="dash-nav-dropdown-item">Apitude Question</a>
-            <a href="chartjs.html" class="dash-nav-dropdown-item">Personality Question</a>
+            <a href="{{route('question.apitude')}}" class="dash-nav-dropdown-item"><i class="fas fa-plus"> Apitude Question</i></a>
+            <a href="{{route('question.personality')}}" class="dash-nav-dropdown-item"><i class="fas fa-plus"> Personality Question</i></a>
 
         </div>
     </div>
@@ -14,9 +14,9 @@
         <a href="#!" class="dash-nav-item dash-nav-dropdown-toggle">
             <i class="fas fa-building"></i> Details </a>
         <div class="dash-nav-dropdown-menu">
-            <a href="cards.html" class="dash-nav-dropdown-item">Organization Details</a>
-            <a href="forms.html" class="dash-nav-dropdown-item">Job Details</a>
-            <a href="forms.html" class="dash-nav-dropdown-item">Requirement Details</a>
+            <a href="{{route('details.organization')}}" class="dash-nav-dropdown-item"><i class="fas fa-arrow-right"> Organization Details</i></a>
+            <a href="{{route('details.job')}}" class="dash-nav-dropdown-item"><i class="fas fa-arrow-right"> Job Details</i></a>
+            <a href="{{route('details.requirement')}}" class="dash-nav-dropdown-item"><i class="fas fa-arrow-right"> Requirement Details</i></a>
 
         </div>
     </div>
