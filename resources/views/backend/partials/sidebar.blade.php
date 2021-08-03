@@ -24,11 +24,11 @@
         <a href="#!" class="dash-nav-item dash-nav-dropdown-toggle">
             <i class="fas fa-user"></i> Candidates </a>
         <div class="dash-nav-dropdown-menu">
-            <a href="blank.html" class="dash-nav-dropdown-item">Personal Information</a>
-            <a href="content.html" class="dash-nav-dropdown-item">Passed Candidates</a>
-            <a href="content.html" class="dash-nav-dropdown-item">Failed Candidates</a>
-            <a href="login.html" class="dash-nav-dropdown-item">Selected Candidates</a>
-            <a href="signup.html" class="dash-nav-dropdown-item">Resume</a>
+            <a href="{{route('candidates.personal')}}" class="dash-nav-dropdown-item"><i class="fas fa-star"> Personal Information</i></a>
+            <a href="{{route('candidates.passed')}}" class="dash-nav-dropdown-item"><i class="fas fa-star"> Passed Candidates</i></a>
+            <a href="{{route('candidates.failed')}}" class="dash-nav-dropdown-item"><i class="fas fa-star"> Failed Candidates</i></a>
+            <a href="{{route('candidates.selected')}}" class="dash-nav-dropdown-item"><i class="fas fa-star"> Selected Candidates</i></a>
+            <a href="{{route('candidates.resume')}}" class="dash-nav-dropdown-item"><i class="fas fa-star"> Resume</i></a>
         </div>
     </div>
     <div class="dash-nav-dropdown">
