@@ -1,4 +1,4 @@
-@extends('backend.master')
+@extends('backend.master_three')
 
 @section('content')
     <form action="{{route('organization.addapitude')}}" method="post">
