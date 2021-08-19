@@ -1,6 +1,17 @@
 @extends('backend.master_three')
 
 @section('content')
+    <tbody>
+    @foreach($questions as $question)
+        <tr>
+            <th scope="row">{{$question->id}}</th>
+            <td>{{$question->question}}</td>
+        </tr>
+
+       @endforeach
+   </tbody>
+
+
     <form action="{{route('organization.addapitude')}}" method="post">
         @csrf
         <div class="form-group">
