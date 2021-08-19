@@ -10,7 +10,7 @@
 
        @endforeach
    </tbody>
-
+    {{$questions->links('pagination::bootstrap-4')}}
 
     <form action="{{route('organization.addapitude')}}" method="post">
         @csrf
