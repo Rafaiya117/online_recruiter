@@ -36,6 +36,7 @@ Route::get('/candidates/resume',[CandidatesController::class,'resume'])->name('c
 Route::get('/organization/view',[OrganizationController::class,'view'])->name('organization.view');
 Route::get('/organization/addapitude',[OrganizationController::class,'addapitude'])->name('organization.addapitude');
 Route::get('/organization/addpersonality',[OrganizationController::class,'addpersonality'])->name('organization.addpersonality');
+Route::get('/organization/addDetails',[OrganizationController::class,'addDetails'])->name('organization.addDetails');
 Route::get('/user/user_view',[UserController::class,'user_view'])->name('user.user_view');
 
 

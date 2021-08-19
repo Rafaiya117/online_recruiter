@@ -17,4 +17,7 @@ class OrganizationController extends Controller
     public function addpersonality(){
         return view('backend.layouts.organization.addpersonality',);
     }
+    public function addDetails(){
+        return view('backend.layouts.organization.addDetails',);
+    }
 }

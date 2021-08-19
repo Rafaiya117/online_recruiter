@@ -1,6 +1,5 @@
-@extends('backend.master')
+@extends('backend.master_three')
 
 @section('content')
-
 
 @endsection
