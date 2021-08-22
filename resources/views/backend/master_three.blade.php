@@ -40,10 +40,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <!-- CSS Files -->
-    <link href="{{url('/css/bootstrap.min.css')}}" rel="stylesheet" />
-    <link href="{{url('/css/light-bootstrap-dashboard.css')}}" rel="stylesheet" />
+    <link href="{{url('backend/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{url('backend/css/light-bootstrap-dashboard.css')}}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{url('/css/demo.css')}}" rel="stylesheet" />
+    <link href="{{url('backend/css/demo.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -4,31 +4,25 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Question;
 
 class QuestionController extends Controller
 {
-    public function apitude(){
-        return view('backend.layouts.question.apitude',);
+    public function apitude_list(){
+        $questions = Question::paginate(10);
+        return view('backend.layouts.question.apitude_list',compact('questions'));
     }
-    public function personality(){
-        return view('backend.layouts.question.personality',);
-    }
-    public function apitudelist( Request $request){
+    public function store(Request $request){
 
-        Question::apitude([
-            name=>$request->question,
-            name=>$request->question
+        Question::create([
+            'question'=> $request->question
         ]);
-
-        return redirect()->back();
+        return redirect()->back('apitude_list');
     }
-    public function personalitylist( Request $request){
 
-        Question::personality([
-            name=>$request->question,
-            name=>$request->question
-        ]);
 
-        return redirect()->back();
+    public function personality_list(){
+        return view('backend.layouts.question.personality_list',);
     }
+
 }

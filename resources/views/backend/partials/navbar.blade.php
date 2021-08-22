@@ -14,26 +14,26 @@ Tip 2: you can also add an image using data-image tag
             <li class="dropdown nav-item active">
                 <a class="nav-link" href="{{route('organization.addDetails')}}" >
                     <i class="fas fa-cog"></i>
-                    <p>Details</p>
+                    <p>Add Details</p>
                 </a>
 
             </li>
             <li>
                 <a class="nav-link" href="{{route('organization.addapitude')}}">
-                    <i class="fas fa-file"></i>
-                    <p>Apitude Question</p>
+                    <i class="fas fa-plus"></i>
+                    <p>Add Apitude Question</p>
                 </a>
             </li>
             <li>
                 <a class="nav-link" href="{{route('organization.addpersonality')}}">
-                    <i class="fas fa-file"></i>
-                    <p>Personality Question</p>
+                    <i class="fas fa-plus"></i>
+                    Add Personality Question
                 </a>
             </li>
 
             <li>
                 <a class="nav-link" href="./typography.html">
-                    <i class="nc-icon nc-paper-2"></i>
+                    <i class="fas fa-file"></i>
                     <p>Resume</p>
                 </a>
             </li>

@@ -13,8 +13,8 @@ class OrganizationController extends Controller
     }
 
     public function addapitude(){
-        $questions = Question::paginate(10);
-        return view('backend.layouts.organization.addapitude',compact('questions'));
+
+        return view('backend.layouts.organization.addapitude',);
     }
     public function store(Request $request){
 

@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController as Home;
+use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\QuestionController;
 use App\Http\Controllers\Backend\DetailsController;
 use App\Http\Controllers\Backend\CandidatesController;
 use App\Http\Controllers\Backend\OrganizationController;
-use App\Http\Controllers\Backend\UserController;
+
 
 
 /*
@@ -23,12 +24,11 @@ Route::get('/',[Home::class,'home'])->name('home');
 
 Route::group(['prefix'=>'admin'],function () {
 
+    Route::get('/',[HomeController::class,'home']);
 
-    Route::get('/questions', [QuestionController::class, 'apitude'])->name('question.apitude');
+    Route::get('/questions/apitude_list', [QuestionController::class, 'apitude_list'])->name('question.apitude_list');
 
-    Route::get('/question/personality', [QuestionController::class, 'personality'])->name('question.personality');
-
-    Route::get('/question/apitudelist', [QuestionController::class, 'apitudelist'])->name('question.apitudelist');
+    Route::get('/question/personality_list', [QuestionController::class, 'personality_list'])->name('question.personality_list');
 
     Route::get('/details', [DetailsController::class, 'job'])->name('details.job');
 
@@ -57,6 +57,6 @@ Route::post('/organization/store',[OrganizationController::class,'store'])->name
 
 Route::get('/organization/addpersonality',[OrganizationController::class,'addpersonality'])->name('organization.addpersonality');
 Route::get('/organization/addDetails',[OrganizationController::class,'addDetails'])->name('organization.addDetails');
-Route::get('/user/user_view',[UserController::class,'user_view'])->name('user.user_view');
+
 
 
