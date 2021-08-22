@@ -51,11 +51,13 @@ Route::group(['prefix'=>'admin'],function () {
 
 
 Route::get('/organization/view',[OrganizationController::class,'view'])->name('organization.view');
+
 Route::get('/organization/addapitude',[OrganizationController::class,'addapitude'])->name('organization.addapitude');
 
 Route::post('/organization/store',[OrganizationController::class,'store'])->name('organization.store');
 
 Route::get('/organization/addpersonality',[OrganizationController::class,'addpersonality'])->name('organization.addpersonality');
+
 Route::get('/organization/addDetails',[OrganizationController::class,'addDetails'])->name('organization.addDetails');
 
 

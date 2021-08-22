@@ -6,7 +6,9 @@
     @foreach($questions as $question)
         <tr>
             <th scope="row">{{$question->id}}</th>
+
             <td>{{$question->question}}</td>
+
         </tr>
 
     @endforeach

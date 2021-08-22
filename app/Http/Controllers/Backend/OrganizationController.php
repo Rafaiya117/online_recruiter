@@ -21,11 +21,12 @@ class OrganizationController extends Controller
         Question::create([
             'question'=> $request->question
         ]);
-        return redirect()->back('addapitude');
+        return redirect()->route('organization.addapitude');
     }
     public function addpersonality(){
-        return view('backend.layouts.organization.addpersonality',);
+        return redirect()->route('organization.addpersonality');
     }
+
     public function addDetails(){
         return view('backend.layouts.organization.addDetails',);
     }

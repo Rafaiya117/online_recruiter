@@ -9,16 +9,12 @@ use App\Models\Question;
 class QuestionController extends Controller
 {
     public function apitude_list(){
+
         $questions = Question::paginate(10);
+
         return view('backend.layouts.question.apitude_list',compact('questions'));
     }
-    public function store(Request $request){
 
-        Question::create([
-            'question'=> $request->question
-        ]);
-        return redirect()->back('apitude_list');
-    }
 
 
     public function personality_list(){
