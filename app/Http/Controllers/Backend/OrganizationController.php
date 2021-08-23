@@ -12,16 +12,16 @@ class OrganizationController extends Controller
         return view('backend.layouts.organization.view',);
     }
 
-    public function addapitude(){
+    public function add_AgricultureQues(){
 
-        return view('backend.layouts.organization.addapitude',);
+        return view('backend.layouts.organization.add_AgricultureQues',);
     }
     public function store(Request $request){
 
         Question::create([
             'question'=> $request->question
         ]);
-        return redirect()->route('organization.addapitude');
+        return redirect()->route('organization.add_AgricultureQues');
     }
     public function addpersonality(){
         return redirect()->route('organization.addpersonality');

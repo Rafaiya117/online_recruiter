@@ -5,7 +5,7 @@
         <a href="#" class="dash-nav-item dash-nav-dropdown-toggle">
             <i class="fas fa-file"></i> View Question </a>
         <div class="dash-nav-dropdown-menu">
-            <a href="{{route('question.apitude_list')}}" class="dash-nav-dropdown-item"><i class="fas fa-pen">Apitude Question</i></a>
+            <a href="{{route('question.Agriculture_list')}}" class="dash-nav-dropdown-item"><i class="fas fa-pen">Agriculture Question</i></a>
             <a href="{{route('question.personality_list')}}" class="dash-nav-dropdown-item"><i class="fas fa-pen">Personality Question</i></a>
 
         </div>

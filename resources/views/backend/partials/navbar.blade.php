@@ -19,7 +19,7 @@ Tip 2: you can also add an image using data-image tag
 
             </li>
             <li>
-                <a class="nav-link" href="{{route('organization.addapitude')}}">
+                <a class="nav-link" href="{{route('organization.add_AgricultureQues')}}">
                     <i class="fas fa-plus"></i>
                     <p>Add Apitude Question</p>
                 </a>
@@ -30,6 +30,8 @@ Tip 2: you can also add an image using data-image tag
                     Add Personality Question
                 </a>
             </li>
+
+
 
             <li>
                 <a class="nav-link" href="./typography.html">

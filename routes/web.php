@@ -26,7 +26,7 @@ Route::group(['prefix'=>'admin'],function () {
 
     Route::get('/',[HomeController::class,'home']);
 
-    Route::get('/questions/apitude_list', [QuestionController::class, 'apitude_list'])->name('question.apitude_list');
+    Route::get('/questions/Agriculture_list', [QuestionController::class, 'Agriculture_list'])->name('question.Agriculture_list');
 
     Route::get('/question/personality_list', [QuestionController::class, 'personality_list'])->name('question.personality_list');
 
@@ -52,7 +52,7 @@ Route::group(['prefix'=>'admin'],function () {
 
 Route::get('/organization/view',[OrganizationController::class,'view'])->name('organization.view');
 
-Route::get('/organization/addapitude',[OrganizationController::class,'addapitude'])->name('organization.addapitude');
+Route::get('/organization/add_AgricultureQues',[OrganizationController::class,'add_AgricultureQues'])->name('organization.add_AgricultureQues');
 
 Route::post('/organization/store',[OrganizationController::class,'store'])->name('organization.store');
 
