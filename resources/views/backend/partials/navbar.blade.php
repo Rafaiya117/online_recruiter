@@ -18,19 +18,64 @@ Tip 2: you can also add an image using data-image tag
                 </a>
 
             </li>
-            <li>
-                <a class="nav-link" href="{{route('organization.add_AgricultureQues')}}">
-                    <i class="fas fa-plus"></i>
-                    <p>Add Apitude Question</p>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="{{route('organization.addpersonality')}}">
-                    <i class="fas fa-plus"></i>
-                    Add Personality Question
-                </a>
-            </li>
 
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+                    <i class="fas fa-caret-down"></i>
+                    Questions
+                </a>
+                <div class="collapse" id="pagesExamples">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('organization.add_AgricultureQues')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal">Agriculture Question </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../examples/pages/rtl.html">
+                                <span class="sidebar-mini"> RS </span>
+                                <span class="sidebar-normal"> RTL Support </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../examples/pages/timeline.html">
+                                <span class="sidebar-mini"> T </span>
+                                <span class="sidebar-normal"> Timeline </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../examples/pages/login.html">
+                                <span class="sidebar-mini"> LP </span>
+                                <span class="sidebar-normal"> Login Page </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../examples/pages/register.html">
+                                <span class="sidebar-mini"> RP </span>
+                                <span class="sidebar-normal"> Register Page </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../examples/pages/lock.html">
+                                <span class="sidebar-mini"> LSP </span>
+                                <span class="sidebar-normal"> Lock Screen Page </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../examples/pages/user.html">
+                                <span class="sidebar-mini"> UP </span>
+                                <span class="sidebar-normal"> User Profile </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../examples/pages/error.html">
+                                <span class="sidebar-mini"> E </span>
+                                <span class="sidebar-normal"> Error Page </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
 
             <li>
@@ -39,8 +84,6 @@ Tip 2: you can also add an image using data-image tag
                     <p>Resume</p>
                 </a>
             </li>
-
-
         </ul>
     </div>
 </div>

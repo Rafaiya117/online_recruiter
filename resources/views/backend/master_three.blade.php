@@ -60,18 +60,18 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="wrapper">
-   @include('backend.partials.navbar')
+    @include('backend.partials.navbar')
     <div class="main-panel">
         <!-- fixed plugin  -->
         <div class="fixed-plugin">
 
         </div>
         <!-- Navbar -->
-       @include('backend.partials.header_two')
-        <!-- End Navbar -->
+    @include('backend.partials.header_two')
+    <!-- End Navbar -->
         <div class="content">
             <div class="container-fluid">
-               @yield('content')
+                @yield('content')
             </div>
         </div>
     </div>
@@ -83,11 +83,9 @@
         n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
         t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
         document,'script','//connect.facebook.net/en_US/fbevents.js');
-
     try{
         fbq('init', '111649226022273');
         fbq('track', "PageView");
-
     }catch(err) {
         console.log('Facebook Track Error:', err);
     }
