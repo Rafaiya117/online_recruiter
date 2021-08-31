@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\QuestionController;
 use App\Http\Controllers\Backend\DetailsController;
 use App\Http\Controllers\Backend\CandidatesController;
 use App\Http\Controllers\Backend\OrganizationController;
+use App\Http\Controllers\Frontend\UserController;
 
 
 
@@ -21,6 +22,9 @@ use App\Http\Controllers\Backend\OrganizationController;
 |
 */
 Route::get('/',[Home::class,'home'])->name('home');
+Route::get('/signup',[UserController::class,'signupForm'])->name('user.signup');
+Route::post('/signup/store',[UserController::class,'signupFormPost'])->name('user.signup.store');
+
 
 Route::group(['prefix'=>'admin'],function () {
 
