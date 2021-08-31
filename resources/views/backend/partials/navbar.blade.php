@@ -12,22 +12,22 @@ Tip 2: you can also add an image using data-image tag
         </div>
         <ul class="nav">
             <li class="dropdown nav-item active">
-                <a class="nav-link" href="{{route('organization.addDetails')}}" >
+                <a class="nav-link" href="#" >
                     <i class="fas fa-cog"></i>
-                    <p>Add Details</p>
+                    <p>Dashboard</p>
                 </a>
 
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+                <a class="nav-link" data-toggle="collapse" href="#questions">
                     <i class="fas fa-caret-down"></i>
                     Questions
                 </a>
-                <div class="collapse" id="pagesExamples">
+                <div class="collapse" id="questions">
                     <ul class="nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{route('organization.add_AgricultureQues')}}">
+                            <a class="nav-link" href="{{route('organization.add_Ques')}}">
                                 <span class="sidebar-mini"></span>
                                 <span class="sidebar-normal">Agriculture Question </span>
                             </a>
@@ -77,9 +77,106 @@ Tip 2: you can also add an image using data-image tag
                     </ul>
                 </div>
 
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#viewdetails">
+                    <i class="fas fa-caret-down"></i>
+                    View Details
+                </a>
+                <div class="collapse" id="viewdetails">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('details.organization')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal">Organization Details </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('details.job')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> Job Details </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('details.requirement')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> Requirement Details </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#candidates">
+                    <i class="fas fa-caret-down"></i>
+                    Candidates
+                </a>
+                <div class="collapse" id="candidates">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('candidates.personal')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal">Candidates Information</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('candidates.passed')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> #</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('candidates.failed')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> # </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('candidates.selected')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> # </span>
+                            </a>
+                        </li>
+                        </ul>
+                </div>
+
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#questionlist">
+                    <i class="fas fa-caret-down"></i>
+                    Question List
+                </a>
+                <div class="collapse" id="questionlist">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('question._list')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal">List</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> #</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> # </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> # </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
 
             <li>
-                <a class="nav-link" href="./typography.html">
+                <a class="nav-link" href="{{route('candidates.resume')}}">
                     <i class="fas fa-file"></i>
                     <p>Resume</p>
                 </a>

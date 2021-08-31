@@ -30,7 +30,7 @@ Route::group(['prefix'=>'admin'],function () {
 
     Route::get('/',[HomeController::class,'home']);
 
-    Route::get('/questions/Agriculture_list', [QuestionController::class, 'Agriculture_list'])->name('question.Agriculture_list');
+    Route::get('/questions/_list', [QuestionController::class, '_list'])->name('question._list');
 
     Route::get('/question/personality_list', [QuestionController::class, 'personality_list'])->name('question.personality_list');
 
@@ -50,19 +50,26 @@ Route::group(['prefix'=>'admin'],function () {
 
     Route::get('/candidates/resume', [CandidatesController::class, 'resume'])->name('candidates.resume');
 
+    Route::get('/organization/view',[OrganizationController::class,'view'])->name('organization.view');
+
+    Route::get('/organization/add_Ques',[OrganizationController::class,'add_Ques'])->name('organization.add_Ques');
+
+    Route::post('/organization/store',[OrganizationController::class,'store'])->name('organization.store');
+
+    Route::get('/organization/addpersonality',[OrganizationController::class,'addpersonality'])->name('organization.addpersonality');
+
+    Route::get('/organization/addDetails',[OrganizationController::class,'addDetails'])->name('organization.addDetails');
+
+    Route::get('/organization/req_org',[OrganizationController::class,'req_org'])->name('organization.req_org');
+
+    Route::post('/req_org/store',[UserController::class,'reg_orgFormPost'])->name('organization.req_org.store');
+
+
+
+
 });
 
 
-
-Route::get('/organization/view',[OrganizationController::class,'view'])->name('organization.view');
-
-Route::get('/organization/add_AgricultureQues',[OrganizationController::class,'add_AgricultureQues'])->name('organization.add_AgricultureQues');
-
-Route::post('/organization/store',[OrganizationController::class,'store'])->name('organization.store');
-
-Route::get('/organization/addpersonality',[OrganizationController::class,'addpersonality'])->name('organization.addpersonality');
-
-Route::get('/organization/addDetails',[OrganizationController::class,'addDetails'])->name('organization.addDetails');
 
 
 

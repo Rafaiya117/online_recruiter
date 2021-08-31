@@ -1,11 +1,11 @@
-@extends('backend.master')
+@extends('backend.master_three')
 
 @section('content')
 
     <tbody>
     @foreach($questions as $question)
         <tr>
-            <th scope="row">{{$question->id}}</th>
+            <th scope="col">{{$question->id}}</th>
 
             <td>{{$question->question}}</td>
 
