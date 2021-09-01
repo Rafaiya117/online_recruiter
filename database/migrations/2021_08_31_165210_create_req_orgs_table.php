@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReqOrgTable extends Migration
+class CreateReqOrgsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateReqOrgTable extends Migration
      */
     public function up()
     {
-        Schema::create('req_org', function (Blueprint $table) {
+        Schema::create('req_orgs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+//            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('mobile');
             $table->rememberToken();
@@ -32,6 +32,6 @@ class CreateReqOrgTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('req_org');
+        Schema::dropIfExists('req_orgs');
     }
 }

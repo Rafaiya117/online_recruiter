@@ -1,28 +1,54 @@
 @extends('backend.master_three')
 
 @section('content')
-    <form action="{{route('organization.req_org.store')}}" type="form" method="Post">
+   <style>
+       form { margin: 0px 10px; }
 
-        @csrf
+       h2 {
+           margin-top: 2px;
+           margin-bottom: 2px;
+       }
+
+       .container { max-width: 360px; }
+
+       .divider {
+           text-align: center;
+           margin-top: 20px;
+           margin-bottom: 5px;
+       }
+
+       .divider hr {
+           margin: 7px 0px;
+           width: 35%;
+       }
+
+       .left { float: left; }
+
+       .right { float: right; }
+
+   </style>
+
     <div class="container">
         <div class="row">
             <div class="panel panel-primary">
                 <div class="panel-body">
-                    <form method="POST" action="#" role="form">
+
+                    <form action="{{route('reqorg.req_org.store')}}" type="form" method="Post">
+                        @csrf
                         <div class="form-group">
                             <h2>Create account</h2>
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="signupName">Company name</label>
-                            <input id="signupName" type="text" maxlength="50" class="form-control">
+                            <label class="control-label" for="organization_name">organization_name</label>
+                            <input name="organization_name" id="organization_name" type="text" maxlength="50" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="signupEmail">Email</label>
-                            <input id="signupEmail" type="email" maxlength="50" class="form-control">
+                            <label class="control-label" for="organization_email">"organization_email</label>
+                            <input name="organization_email" id="organization_email" type="email" maxlength="50" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="signupEmailagain">Email again</label>
-                            <input id="signupEmailagain" type="email" maxlength="50" class="form-control">
+                            <label class="control-label" for="organization_mobile">organization_mobile</label>
+                            <input name="organization_mobile" id="organization_mobile" type="mobile_number" maxlength="50" class="form-control">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="signupPassword">Password</label>

@@ -2,12 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController as Home;
+
 use App\Http\Controllers\Backend\HomeController;
+
 use App\Http\Controllers\Backend\QuestionController;
+
 use App\Http\Controllers\Backend\DetailsController;
+
 use App\Http\Controllers\Backend\CandidatesController;
+
 use App\Http\Controllers\Backend\OrganizationController;
+
+use App\Http\Controllers\Backend\UserController as User;
+
 use App\Http\Controllers\Frontend\UserController;
+
+use App\Http\Controllers\Frontend\ReqOrgController;
 
 
 
@@ -22,8 +32,16 @@ use App\Http\Controllers\Frontend\UserController;
 |
 */
 Route::get('/',[Home::class,'home'])->name('home');
+
 Route::get('/signup',[UserController::class,'signupForm'])->name('user.signup');
+
 Route::post('/signup/store',[UserController::class,'signupFormPost'])->name('user.signup.store');
+
+Route::get('/reg_org',[ReqOrgController::class,'req_org'])->name('reqorg.req_org');
+
+Route::post('/reg_org/store',[ReqOrgController::class,'req_orgPost'])->name('reqorg.req_org.store');
+
+Route::get('/admin/login',[User::class,'login'])->name('admin.login');
 
 
 Route::group(['prefix'=>'admin'],function () {
@@ -60,9 +78,6 @@ Route::group(['prefix'=>'admin'],function () {
 
     Route::get('/organization/addDetails',[OrganizationController::class,'addDetails'])->name('organization.addDetails');
 
-    Route::get('/organization/req_org',[OrganizationController::class,'req_org'])->name('organization.req_org');
-
-    Route::post('/req_org/store',[UserController::class,'reg_orgFormPost'])->name('organization.req_org.store');
 
 
 

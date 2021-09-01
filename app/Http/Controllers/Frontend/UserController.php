@@ -15,6 +15,7 @@ class UserController extends Controller
 
     public function signupFormPost(Request $request)
     {
+
         User::create([
             'name'=>$request->customer_name,
             'mobile'=>$request->customer_mobile,
