@@ -103,42 +103,16 @@ Tip 2: you can also add an image using data-image tag
                             </a>
                         </li>
 
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('details.org_registration')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> Organization Registration Details </span>
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
 
-            <li class="nav-item ">
-                <a class="nav-link" data-toggle="collapse" href="#candidates">
-                    <i class="fas fa-caret-down"></i>
-                    Candidates
-                </a>
-                <div class="collapse" id="candidates">
-                    <ul class="nav">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="{{route('candidates.personal')}}">
-                                <span class="sidebar-mini"></span>
-                                <span class="sidebar-normal">Candidates Information</span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="{{route('candidates.passed')}}">
-                                <span class="sidebar-mini"></span>
-                                <span class="sidebar-normal"> #</span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="{{route('candidates.failed')}}">
-                                <span class="sidebar-mini"></span>
-                                <span class="sidebar-normal"> # </span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="{{route('candidates.selected')}}">
-                                <span class="sidebar-mini"></span>
-                                <span class="sidebar-normal"> # </span>
-                            </a>
-                        </li>
-                        </ul>
-                </div>
 
             <li class="nav-item ">
                 <a class="nav-link" data-toggle="collapse" href="#questionlist">
@@ -176,7 +150,7 @@ Tip 2: you can also add an image using data-image tag
 
 
             <li>
-                <a class="nav-link" href="{{route('candidates.resume')}}">
+                <a class="nav-link" href="#">
                     <i class="fas fa-file"></i>
                     <p>Resume</p>
                 </a>

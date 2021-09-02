@@ -14,11 +14,4 @@ class QuestionController extends Controller
 
         return view('backend.layouts.question._list',compact('questions'));
     }
-
-
-
-    public function personality_list(){
-        return view('backend.layouts.question.personality_list',);
-    }
-
 }

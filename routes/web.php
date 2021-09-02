@@ -58,15 +58,7 @@ Route::group(['prefix'=>'admin'],function () {
 
     Route::get('/details/requirement', [DetailsController::class, 'requirement'])->name('details.requirement');
 
-    Route::get('/candidates', [CandidatesController::class, 'personal'])->name('candidates.personal');
-
-    Route::get('/candidates/passed', [CandidatesController::class, 'passed'])->name('candidates.passed');
-
-    Route::get('/candidates/failed', [CandidatesController::class, 'failed'])->name('candidates.failed');
-
-    Route::get('/candidates/selected', [CandidatesController::class, 'selected'])->name('candidates.selected');
-
-    Route::get('/candidates/resume', [CandidatesController::class, 'resume'])->name('candidates.resume');
+    Route::get('/details/org_registration', [DetailsController::class, 'org_registration'])->name('details.org_registration');
 
     Route::get('/organization/view',[OrganizationController::class,'view'])->name('organization.view');
 

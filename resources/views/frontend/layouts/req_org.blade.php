@@ -1,8 +1,13 @@
-@extends('backend.master_three')
 
-@section('content')
    <style>
-       form { margin: 0px 10px; }
+       form { margin: 0px 10px;
+           position: absolute;
+           top: 20%;
+           left: 50%;
+           margin: -150px 0 0 -150px;
+           width:300px;
+           height:300px;
+       }
 
        h2 {
            margin-top: 2px;
@@ -25,6 +30,33 @@
        .left { float: left; }
 
        .right { float: right; }
+       body{
+           background-image: url('https://media.istockphoto.com/photos/minimalist-office-with-city-view-picture-id1198804581?k=20&m=1198804581&s=612x612&w=0&h=FQ59bGTwb3L2m2J1gRT77A0D0kH7LwSKErsFL4aPPAc=');
+           background-position:center ;
+           background-size: cover;
+       }
+       input {
+           width: 100%;
+           margin-bottom: 10px;
+           background: rgba(0,0,0,0.3);
+           border: 2px;
+           outline: 2px;
+           padding: 10px;
+           font-size: 13px;
+           color: #fff;
+           text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+           border: 1px solid rgba(0,0,0,0.3);
+           border-radius: 4px;
+           box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+           -webkit-transition: box-shadow .5s ease;
+           -moz-transition: box-shadow .5s ease;
+           -o-transition: box-shadow .5s ease;
+           -ms-transition: box-shadow .5s ease;
+           transition: box-shadow .10s ease;
+
+       }
+       input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
 
    </style>
 
@@ -71,4 +103,4 @@
     </div>
 
 
-@endsection
+
