@@ -43,8 +43,10 @@ Route::post('/reg_org/store',[ReqOrgController::class,'req_orgPost'])->name('req
 
 Route::get('/admin/login',[User::class,'login'])->name('admin.login');
 
+Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.post');
 
-Route::group(['prefix'=>'admin'],function () {
+
+Route::group(['prefix'=>'admin','middleware'=>'auth'],function () {
 
     Route::get('/',[HomeController::class,'home']);
 

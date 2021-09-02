@@ -71,10 +71,14 @@
 <body>
 <div class="login">
     <h1>Login</h1>
+    @if(session()->has('message'))
+        <span class="alert alert-danger">{{session()->get('message')}}</span>
+    @endif
     <div class="card-body-with-dark-table">
-    <form method="post">
-        <input type="text" name="u" placeholder="Username" required="required" />
-        <input type="password" name="p" placeholder="Password" required="required" />
+    <form method="post" action="{{route('admin.login.post')}}">
+        @csrf
+        <input type="name" name="name" placeholder="name" required="required" />
+        <input type="password" name="password" placeholder="Password" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
     </form>
     </div>
