@@ -24,9 +24,6 @@ class OrganizationController extends Controller
         ]);
         return redirect()->route('organization.add_Ques');
     }
-    public function addpersonality(){
-        return redirect()->route('organization.addpersonality');
-    }
 
     public function addDetails(){
         return view('backend.layouts.organization.addDetails',);

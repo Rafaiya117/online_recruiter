@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Frontend\HomeController as Home;
 
 use App\Http\Controllers\Backend\HomeController;
@@ -41,42 +42,44 @@ Route::get('/reg_org',[ReqOrgController::class,'req_org'])->name('reqorg.req_org
 
 Route::post('/reg_org/store',[ReqOrgController::class,'req_orgPost'])->name('reqorg.req_org.store');
 
+Route::get('/post_job',[ReqOrgController::class,'post_job'])->name('reqorg.post_job');
+
+Route::post('/post_job/store',[ReqOrgController::class,'post_jobStore'])->name('reqorg.post_job.store');
+
 Route::get('/admin/login',[User::class,'login'])->name('admin.login');
 
 Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.post');
 
 
-Route::group(['prefix'=>'admin','middleware'=>'auth'],function () {
 
-    Route::get('/',[HomeController::class,'home']);
+    Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'role'], function () {
 
-    Route::get('/questions/_list', [QuestionController::class, '_list'])->name('question._list');
+        Route::get('/', [HomeController::class, 'home']);
 
-    Route::get('/question/personality_list', [QuestionController::class, 'personality_list'])->name('question.personality_list');
+        Route::get('/logout', [User::class, 'logout'])->name('logout');
 
-    Route::get('/details', [DetailsController::class, 'job'])->name('details.job');
+        Route::get('/questions/_list', [QuestionController::class, '_list'])->name('question._list');
 
-    Route::get('/details/organization', [DetailsController::class, 'organization'])->name('details.organization');
+        Route::get('/question/personality_list', [QuestionController::class, 'personality_list'])->name('question.personality_list');
 
-    Route::get('/details/requirement', [DetailsController::class, 'requirement'])->name('details.requirement');
+        Route::get('/details', [DetailsController::class, 'job'])->name('details.job');
 
-    Route::get('/details/org_registration', [DetailsController::class, 'org_registration'])->name('details.org_registration');
+        Route::get('/details/organization', [DetailsController::class, 'organization'])->name('details.organization');
 
-    Route::get('/organization/view',[OrganizationController::class,'view'])->name('organization.view');
+        Route::get('/details/requirement', [DetailsController::class, 'requirement'])->name('details.requirement');
 
-    Route::get('/organization/add_Ques',[OrganizationController::class,'add_Ques'])->name('organization.add_Ques');
+        Route::get('/details/org_registration', [DetailsController::class, 'org_registration'])->name('details.org_registration');
 
-    Route::post('/organization/store',[OrganizationController::class,'store'])->name('organization.store');
+        Route::get('/organization/view', [OrganizationController::class, 'view'])->name('organization.view');
 
-    Route::get('/organization/addpersonality',[OrganizationController::class,'addpersonality'])->name('organization.addpersonality');
+        Route::get('/organization/add_Ques', [OrganizationController::class, 'add_Ques'])->name('organization.add_Ques');
 
-    Route::get('/organization/addDetails',[OrganizationController::class,'addDetails'])->name('organization.addDetails');
+        Route::post('/organization/store', [OrganizationController::class, 'store'])->name('organization.store');
 
-
-
+        Route::get('/organization/addDetails', [OrganizationController::class, 'addDetails'])->name('organization.addDetails');
 
 
-});
+    });
 
 
 
