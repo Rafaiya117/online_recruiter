@@ -21,7 +21,7 @@ class UserController extends Controller
         {
             if(auth()->user()->role=='admin')
             {
-                return redirect()->route('home');
+                return redirect()->route('dashboard');
             }else
             {
                 Auth::logout();

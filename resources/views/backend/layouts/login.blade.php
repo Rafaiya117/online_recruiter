@@ -77,6 +77,7 @@
     <div class="card-body-with-dark-table">
     <form method="post" action="{{route('admin.login.post')}}">
         @csrf
+{{--        <input type="email" name="email" placeholder="Email" required="required" />--}}
         <input type="name" name="name" placeholder="name" required="required" />
         <input type="password" name="password" placeholder="Password" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>

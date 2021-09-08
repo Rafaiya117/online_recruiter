@@ -148,6 +148,12 @@ Tip 2: you can also add an image using data-image tag
                     </ul>
                 </div>
 
+            <li>
+                <a class="nav-link" href="{{route('category.list')}}">
+                    <i class="fas fa-file"></i>
+                    <p>Category</p>
+                </a>
+            </li>
 
             <li>
                 <a class="nav-link" href="#">

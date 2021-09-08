@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post_Job;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -26,5 +27,10 @@ class UserController extends Controller
 
         return redirect()->back()->with('success','User Registration Successful.');
 
+    }
+
+    public function job_offer(){
+        $post__jobs= Post_Job::paginate(10);
+        return view('frontend.layouts.job_offer',compact('post__jobs'));
     }
 }
