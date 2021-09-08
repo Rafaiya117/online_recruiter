@@ -1,7 +1,6 @@
 @extends('frontend.master')
 
-   @section('content')
-
+@section('content')
 
     <!doctype html>
 <html lang="en">
@@ -27,7 +26,6 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-
                             <th scope="col">Name</th>
                             <th scope="col">Address</th>
                             <th scope="col">Email</th>
@@ -43,7 +41,6 @@
 
                         @foreach($post__jobs as $post__job)
                             <tr>
-
                                 <td scope="col">{{$post__job->organization_name}}</td>
                                 <td>{{$post__job->organization_address}}</td>
                                 <td>{{$post__job->organization_email}}</td>
@@ -70,7 +67,5 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"68b59b25bf0d48dc","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.8.1","si":10}'></script>
 </body>
 </html>
-
-
 
 @endsection

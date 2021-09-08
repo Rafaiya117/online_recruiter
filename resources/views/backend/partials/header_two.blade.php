@@ -32,7 +32,7 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#pablo">
+                    <a class="nav-link" href="#">
                         <span class="no-icon">Account</span>
                     </a>
                 </li>
@@ -50,7 +50,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#pablo">
+                    <a class="nav-link" href="{{route('admin.login')}}">
                         <span class="no-icon">Log out</span>
                     </a>
                 </li>
