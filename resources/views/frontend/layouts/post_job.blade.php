@@ -20,6 +20,11 @@
         <form action="{{route('reqorg.post_job.store')}}" type="form" method="Post">
             @csrf
             <div class=" card mb-3">
+                <label for="category_id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="category_id" name="category_id" placeholder="Enter number">
+            </div>
+
+            <div class=" card mb-3">
                        <label for="organization_name" class="form-label">Organization_name</label>
                        <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="Enter name">
                    </div>
@@ -67,11 +72,6 @@
             <div class="card">
                 <label for="skill" class="form-label">Skill</label>
                 <input placeholder="Enter skill" type="text" class="form-control" id="skill" name="skill">
-            </div>
-
-            <div class="card">
-                <label for="education" class="form-label">Position</label>
-                <input placeholder="Enter education" type="text" class="form-control" id="education" name="position">
             </div>
 
             <div class="card">

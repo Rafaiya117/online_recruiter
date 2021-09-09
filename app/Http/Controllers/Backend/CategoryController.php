@@ -37,12 +37,12 @@ class CategoryController extends Controller
 
     public function allJob($id)
     {
-        $jobs=Job::where('category_id',$id)->get();
+        $post__jobs=Post_Job::where('category_id',$id)->get();
 
-//        $category=Category::with('jobs')->find($id);//using relationshop
-//        dd($jobs);
+//        $post__jobs=Post_Job::with('jobs')->find($id);//using relationshop
+//        dd($post__jobs);
 
 
-        return view('backend.layouts.category.job-list',compact('jobs'));
+        return view('backend.layouts.category.job-list',compact('post__jobs'));
     }
 }

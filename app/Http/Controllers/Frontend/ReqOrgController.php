@@ -33,6 +33,7 @@ class ReqOrgController extends Controller
 
 
  Post_Job::create([
+     'category_id'=>$request->category_id,
      'organization_name'=>$request->organization_name,
      'organization_address'=>$request->organization_address,
      'organization_email'=>$request->organization_email,

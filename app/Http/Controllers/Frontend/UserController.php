@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Post_Job;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -30,7 +31,10 @@ class UserController extends Controller
     }
 
     public function job_offer(){
-        $post__jobs= Post_Job::paginate(10);
-        return view('frontend.layouts.job_offer',compact('post__jobs'));
+
+        $post__jobs= Post_Job::with('category')-paginate(10);
+
+        $categories=Category::all();
+        return view('frontend.layouts.job_offer',compact('post__jobs','categories'));
     }
 }

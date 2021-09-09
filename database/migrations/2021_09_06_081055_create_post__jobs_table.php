@@ -15,6 +15,7 @@ class CreatePostJobsTable extends Migration
     {
         Schema::create('post__jobs', function (Blueprint $table) {
             $table->id();
+            $table->integer('category_id');
             $table->string('organization_name');
             $table->string('organization_address');
             $table->string('organization_email')->unique();

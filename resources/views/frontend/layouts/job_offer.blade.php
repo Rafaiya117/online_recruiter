@@ -2,70 +2,215 @@
 
 @section('content')
 
-    <!doctype html>
-<html lang="en">
-<head>
+    <section class="site-section">
+        <div class="container">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{url('/frontend/css/A.style.css.pagespeed.cf.XgDbNFMzAt.css')}}">
-</head>
-<body>
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center mb-5">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-7 text-center">
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="table-wrap">
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Job_Type</th>
-                            <th scope="col">Position</th>
-                            <th scope="col">Salary</th>
-                            <th scope="col">Responsibilities</th>
-                            <th scope="col">Skill</th>
-                            <th scope="col">Education</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-
-                        @foreach($post__jobs as $post__job)
-                            <tr>
-                                <td scope="col">{{$post__job->organization_name}}</td>
-                                <td>{{$post__job->organization_address}}</td>
-                                <td>{{$post__job->organization_email}}</td>
-                                <td>{{$post__job->job_name}}</td>
-                                <td>{{$post__job->position}}</td>
-                                <td>{{$post__job->salary}}</td>
-                                <td>{{$post__job->responsibilities}}</td>
-                                <td>{{$post__job->skill}}</td>
-                                <td>{{$post__job->education}}</td>
-                                <td><a class="btn btn-success">Apply</a></td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<script src="{{url('/frontend/js/jquery.min.js')}}"></script>
-<script src="{{url('/frontend/js/popper.js+bootstrap.min.js+main.js.pagespeed.jc.eF4oxXGybC.js')}}"></script><script>eval(mod_pagespeed_1ubagWZVDG);</script>
-<script>eval(mod_pagespeed_sHeX_56lIR);</script>
-<script>eval(mod_pagespeed_v54rJ2Fspg);</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"68b59b25bf0d48dc","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.8.1","si":10}'></script>
-</body>
-</html>
 
+            <ul class="job-listings mb-5">
+                {{--                loop start--}}
+                @foreach($post__jobs as $post__job)
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href="job-single.html"></a>
+
+                        <div class="job-listing-logo">
+                            <img src="{{url('frontend/images/job_logo_1.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>{{$post__job->job_name}}</h2>
+                                <strong>{{$post__job->organization_name}}</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <span class="icon-room"></span> {{$post__job->organization_address}}
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-danger">Part Time</span>
+                            </div>
+                            <div class="job-listing-meta">
+
+                                <span class="badge badge-info">Apply</span>
+
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href="job-single.html"></a>
+                        <div class="job-listing-logo">
+                            <img src="{{url('frontend/images/job_logo_2.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>{{$post__job->job_name}}</h2>
+                                <strong>{{$post__job->organization_name}}</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <span class="icon-room"></span> {{$post__job->organization_address}}
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-success">Full Time</span>
+                            </div>
+                            <div class="job-listing-meta">
+
+                                <span class="badge badge-info">Apply</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href="job-single.html"></a>
+                        <div class="job-listing-logo">
+                            <img src="{{url('frontend/images/job_logo_3.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>{{$post__job->job_name}}</h2>
+                                <strong>{{$post__job->organization_name}}</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <span class="icon-room"></span> {{$post__job->organization_address}}
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-success">Full Time</span>
+                            </div>
+                            <div class="job-listing-meta">
+
+                                <span class="badge badge-info">Apply</span>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href="job-single.html"></a>
+                        <div class="job-listing-logo">
+                            <img src="{{url('frontend/images/job_logo_4.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>{{$post__job->job_name}}</h2>
+                                <strong>{{$post__job->organization_name}}</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <span class="icon-room"></span> {{$post__job->organization_address}}
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-success">Full Time</span>
+                            </div>
+                            <div class="job-listing-meta">
+
+                                <span class="badge badge-info">Apply</span>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href="job-single.html"></a>
+                        <div class="job-listing-logo">
+                            <img src="{{url('frontend/images/job_logo_5.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>{{$post__job->job_name}}</h2>
+                                <strong>{{$post__job->organization_name}}</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <span class="icon-room"></span> {{$post__job->organization_address}}
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-success">Full Time</span>
+                            </div>
+                            <div class="job-listing-meta">
+
+                                <span class="badge badge-info">Apply</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href="job-single.html"></a>
+                        <div class="job-listing-logo">
+                            <img src="{{url('frontend/images/job_logo_1.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>{{$post__job->job_name}}</h2>
+                                <strong>{{$post__job->organization_name}}</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <span class="icon-room"></span> {{$post__job->organization_address}}
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-danger">Part Time</span>
+                            </div>
+                            <div class="job-listing-meta">
+
+                                <span class="badge badge-info">Apply</span>
+
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href="job-single.html"></a>
+                        <div class="job-listing-logo">
+                            <img src="{{url('frontend/images/job_logo_2.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>{{$post__job->job_name}}</h2>
+                                <strong>{{$post__job->organization_name}}</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <span class="icon-room"></span> {{$post__job->organization_address}}
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-success">Full Time</span>
+                            </div>
+                            <div class="job-listing-meta">
+
+                                <span class="badge badge-info">Apply</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    {{--                loop end--}} @endforeach
+            </ul>
+
+
+
+
+            <div class="row pagination-wrap">
+                <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+                    <span>Showing 1-7 Of 43,167 Jobs</span>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="custom-pagination ml-auto">
+                        <a href="#" class="prev">Prev</a>
+                        <div class="d-inline-block">
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                        </div>
+                        <a href="{{route('user.job_offer')}}" class="next">Next</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 @endsection

@@ -16,10 +16,10 @@
         <tbody>
         {{--categories--}}
         {{--@dd($categories)--}}
-        @foreach($jobs as $key=>$data)
+        @foreach($post__jobs as $key=>$data)
             <tr>
                 <th scope="row">{{$key+1}}</th>
-                <td>{{$data->name}}</td>
+                <td>{{$data->job_name}}</td>
                 <td>{{$data->description}}</td>
 
             </tr>

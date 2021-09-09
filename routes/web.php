@@ -74,7 +74,7 @@ Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.po
         Route::get('/categories', [CategoryController::class, 'list'])->name('category.list');
         Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
         Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
-        Route::get('/category/{id}/jobs', [CategoryController::class, 'allJob'])->name('category.job');
+        Route::get('/category/{id}/post__jobs', [CategoryController::class, 'allJob'])->name('category.post__job');
 
     });
 

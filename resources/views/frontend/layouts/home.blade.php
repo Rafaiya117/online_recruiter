@@ -72,6 +72,9 @@
             </div>
 
             <ul class="job-listings mb-5">
+{{--                loop start--}}
+                @foreach($post__jobs as $post__job)
+
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
                     <a href="job-single.html"></a>
 
@@ -81,14 +84,19 @@
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                         <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                            <h2>Product designer</h2>
-                            <strong>Adidas</strong>
+                            <h2>{{$post__job->job_name}}</h2>
+                            <strong>{{$post__job->organization_name}}</strong>
                         </div>
                         <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                            <span class="icon-room"></span> New York, New York
+                            <span class="icon-room"></span> {{$post__job->organization_address}}
                         </div>
                         <div class="job-listing-meta">
                             <span class="badge badge-danger">Part Time</span>
+                        </div>
+                        <div class="job-listing-meta">
+
+                            <span class="badge badge-info">Apply</span>
+
                         </div>
                     </div>
 
@@ -101,14 +109,19 @@
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                         <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                            <h2>Digital Marketing Director</h2>
-                            <strong>Sprint</strong>
+                            <h2>{{$post__job->job_name}}</h2>
+                            <strong>{{$post__job->organization_name}}</strong>
                         </div>
                         <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                            <span class="icon-room"></span> Overland Park, Kansas
+                            <span class="icon-room"></span> {{$post__job->organization_address}}
                         </div>
                         <div class="job-listing-meta">
                             <span class="badge badge-success">Full Time</span>
+                        </div>
+                        <div class="job-listing-meta">
+
+                            <span class="badge badge-info">Apply</span>
+
                         </div>
                     </div>
                 </li>
@@ -121,14 +134,19 @@
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                         <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                            <h2>Back-end Engineer (Python)</h2>
-                            <strong>Amazon</strong>
+                            <h2>{{$post__job->job_name}}</h2>
+                            <strong>{{$post__job->organization_name}}</strong>
                         </div>
                         <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                            <span class="icon-room"></span> Overland Park, Kansas
+                            <span class="icon-room"></span> {{$post__job->organization_address}}
                         </div>
                         <div class="job-listing-meta">
                             <span class="badge badge-success">Full Time</span>
+                        </div>
+                        <div class="job-listing-meta">
+
+                            <span class="badge badge-info">Apply</span>
+
                         </div>
                     </div>
                 </li>
@@ -141,14 +159,19 @@
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                         <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                            <h2>Senior Art Director</h2>
-                            <strong>Microsoft</strong>
+                            <h2>{{$post__job->job_name}}</h2>
+                            <strong>{{$post__job->organization_name}}</strong>
                         </div>
                         <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                            <span class="icon-room"></span> Anywhere
+                            <span class="icon-room"></span> {{$post__job->organization_address}}
                         </div>
                         <div class="job-listing-meta">
                             <span class="badge badge-success">Full Time</span>
+                        </div>
+                        <div class="job-listing-meta">
+
+                            <span class="badge badge-info">Apply</span>
+
                         </div>
                     </div>
                 </li>
@@ -161,14 +184,19 @@
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                         <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                            <h2>Product Designer</h2>
-                            <strong>Puma</strong>
+                            <h2>{{$post__job->job_name}}</h2>
+                            <strong>{{$post__job->organization_name}}</strong>
                         </div>
                         <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                            <span class="icon-room"></span> New York
+                            <span class="icon-room"></span> {{$post__job->organization_address}}
                         </div>
                         <div class="job-listing-meta">
                             <span class="badge badge-success">Full Time</span>
+                        </div>
+                        <div class="job-listing-meta">
+
+                            <span class="badge badge-info">Apply</span>
+
                         </div>
                     </div>
                 </li>
@@ -180,14 +208,19 @@
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                         <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                            <h2>Product Designer</h2>
-                            <strong>Adidas</strong>
+                            <h2>{{$post__job->job_name}}</h2>
+                            <strong>{{$post__job->organization_name}}</strong>
                         </div>
                         <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                            <span class="icon-room"></span> New York, New York
+                            <span class="icon-room"></span> {{$post__job->organization_address}}
                         </div>
                         <div class="job-listing-meta">
                             <span class="badge badge-danger">Part Time</span>
+                        </div>
+                        <div class="job-listing-meta">
+
+                            <span class="badge badge-info">Apply</span>
+
                         </div>
                     </div>
 
@@ -200,17 +233,23 @@
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                         <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                            <h2>Digital Marketing Director</h2>
-                            <strong>Sprint</strong>
+                            <h2>{{$post__job->job_name}}</h2>
+                            <strong>{{$post__job->organization_name}}</strong>
                         </div>
                         <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                            <span class="icon-room"></span> Overland Park, Kansas
+                            <span class="icon-room"></span> {{$post__job->organization_address}}
                         </div>
                         <div class="job-listing-meta">
                             <span class="badge badge-success">Full Time</span>
                         </div>
+                        <div class="job-listing-meta">
+
+                            <span class="badge badge-info">Apply</span>
+
+                        </div>
                     </div>
                 </li>
+{{--                loop end--}} @endforeach
             </ul>
 
 
