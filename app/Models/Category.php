@@ -4,13 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Queue\Jobs\Job;
+
+
 
 class Category extends Model
 {
     use HasFactory;
     protected $guarded=[];
-    public function jobs(){
-        return $this->hasMany(Job::class);
+
+    public function post__jobs(){
+
+        return $this->hasMany(Post_Job::class);
     }
 }

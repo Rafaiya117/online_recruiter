@@ -1,6 +1,12 @@
 @extends('backend.master_three')
 
 @section('content')
+
+
+    <a href="{{route('question.add_Ques')}}" class="btn btn-info">
+        <i class="bi bi-list-nested"></i>
+        Create New Category</a>
+
     <table class="table">
         <thead>
         <tr>

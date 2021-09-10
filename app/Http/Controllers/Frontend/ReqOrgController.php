@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Post_Job;
 use App\Models\Req_org;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ReqOrgController extends Controller
@@ -26,7 +27,10 @@ class ReqOrgController extends Controller
         return redirect()->back()->with('success','User Registration Successful.');
     }
     public function post_job(){
-        return view ('frontend.layouts.post_job');
+        $post__jobs=Post_Job::with('category')->paginate(10);
+
+        $categories=Category::all();
+        return view ('frontend.layouts.post_job',compact('post__jobs','categories'));
     }
     public function post_jobStore(Request $request){
 

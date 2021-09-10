@@ -58,17 +58,13 @@ Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.po
         Route::get('/logout', [User::class, 'logout'])->name('logout');
 
         Route::get('/questions/_list', [QuestionController::class, '_list'])->name('question._list');
-        Route::get('/question/personality_list', [QuestionController::class, 'personality_list'])->name('question.personality_list');
+        Route::get('/questions/add_Ques', [QuestionController::class, 'add_Ques'])->name('question.add_Ques');
+        Route::post('/questions/store', [QuestionController::class, 'store'])->name('question.store');
+        Route::get('/questions/create', [QuestionController::class, 'create'])->name('question.create');
 
-        Route::get('/details', [DetailsController::class, 'job'])->name('details.job');
-        Route::get('/details/organization', [DetailsController::class, 'organization'])->name('details.organization');
-        Route::get('/details/requirement', [DetailsController::class, 'requirement'])->name('details.requirement');
+
         Route::get('/details/org_registration', [DetailsController::class, 'org_registration'])->name('details.org_registration');
 
-        Route::get('/organization/view', [OrganizationController::class, 'view'])->name('organization.view');
-        Route::get('/organization/add_Ques', [OrganizationController::class, 'add_Ques'])->name('organization.add_Ques');
-        Route::post('/organization/store', [OrganizationController::class, 'store'])->name('organization.store');
-        Route::get('/organization/addDetails', [OrganizationController::class, 'addDetails'])->name('organization.addDetails');
 
 
         Route::get('/categories', [CategoryController::class, 'list'])->name('category.list');

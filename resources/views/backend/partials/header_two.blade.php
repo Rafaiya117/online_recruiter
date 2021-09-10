@@ -32,8 +32,8 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span class="no-icon">Account</span>
+                    <a class="nav-link" href="{{route('reqorg.post_job')}}">
+                        <span class="no-icon">Post Job</span>
                     </a>
                 </li>
                 <li class="nav-item dropdown">

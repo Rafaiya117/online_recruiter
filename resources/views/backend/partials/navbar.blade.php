@@ -27,7 +27,7 @@ Tip 2: you can also add an image using data-image tag
                 <div class="collapse" id="questions">
                     <ul class="nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{route('organization.add_Ques')}}">
+                            <a class="nav-link" href="{{route('question.add_Ques')}}">
                                 <span class="sidebar-mini"></span>
                                 <span class="sidebar-normal"> Add Question </span>
                             </a>

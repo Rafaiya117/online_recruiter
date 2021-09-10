@@ -19,9 +19,13 @@
             <br>
         <form action="{{route('reqorg.post_job.store')}}" type="form" method="Post">
             @csrf
-            <div class=" card mb-3">
-                <label for="category_id" class="form-label">Id</label>
-                <input type="text" class="form-control" id="category_id" name="category_id" placeholder="Enter number">
+            <div class="form-group">
+                <label for="product_name">Select Category</label>
+                <select class="form-control" name="category_id" id="">
+                    @foreach($categories as $cat)
+                        <option value="{{$cat->id}}">{{$cat->name}}</option>
+                    @endforeach
+                </select>
             </div>
 
             <div class=" card mb-3">

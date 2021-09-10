@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <form action="{{route('organization.store')}}" method="post">
+    <form action="{{route('question.store')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="name">Enter Question</label>
