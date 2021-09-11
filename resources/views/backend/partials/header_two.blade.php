@@ -9,31 +9,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <ul class="nav navbar-nav mr-auto">
 
-                <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="">Notification</i>
-                        <span class="notification">5</span>
-                        <span class="d-lg-none"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Notification 1</a>
-                        <a class="dropdown-item" href="#">Notification 2</a>
-                        <a class="dropdown-item" href="#">Notification 3</a>
-                        <a class="dropdown-item" href="#">Notification 4</a>
-                        <a class="dropdown-item" href="#">Another notification</a>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-search">Search</i>
-                        <span class="d-lg-block">&nbsp;</span>
-                    </a>
-                </li>
+
+
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('reqorg.post_job')}}">
-                        <span class="no-icon">Post Job</span>
+                    <a class="nav-link" href="{{route('details.post_job')}}">
+                        <span class="no-icon"></span>
                     </a>
                 </li>
                 <li class="nav-item dropdown">

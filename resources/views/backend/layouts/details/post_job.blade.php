@@ -1,4 +1,4 @@
-@extends('frontend.master')
+@extends('backend.master_three')
 @section('content')
 <style>
     body {
@@ -17,7 +17,7 @@
     <div class="col-md-6">
         <div class="card-body p-5 text-center">
             <br>
-        <form action="{{route('reqorg.post_job.store')}}" type="form" method="Post">
+        <form action="{{route('details.post_job.store')}}" type="form" method="Post">
             @csrf
             <div class="form-group">
                 <label for="product_name">Select Category</label>

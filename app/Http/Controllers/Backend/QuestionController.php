@@ -26,7 +26,11 @@ class QuestionController extends Controller
     public function store(Request $request){
 
         Question::create([
-            'question'=> $request->question
+            'question'=> $request->question,
+            'answar1'=>$request->answar1,
+            'answar2'=>$request->answar2,
+            'answar3'=>$request->answar3
+
         ]);
         return redirect()->route('question._list');
     }

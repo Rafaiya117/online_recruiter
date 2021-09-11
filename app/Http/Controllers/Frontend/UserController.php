@@ -32,7 +32,7 @@ class UserController extends Controller
 
     public function job_offer(){
 
-        $post__jobs= Post_Job::with('category')-paginate(10);
+        $post__jobs= Post_Job::with('category')->paginate(10);
 
         $categories=Category::all();
         return view('frontend.layouts.job_offer',compact('post__jobs','categories'));

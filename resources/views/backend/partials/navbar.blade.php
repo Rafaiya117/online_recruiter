@@ -16,7 +16,13 @@ Tip 2: you can also add an image using data-image tag
                     <i class="fas fa-cog"></i>
                     <p>Dashboard</p>
                 </a>
+            </li>
 
+            <li class="dropdown nav-item active">
+                <a class="nav-link" href="{{route('details.post_job')}}" >
+                    <i class="fas fa-plus-circle"></i>
+                    <p>Post Job</p>
+                </a>
             </li>
 
             <li class="nav-item ">

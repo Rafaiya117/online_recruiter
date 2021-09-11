@@ -41,12 +41,6 @@ Route::post('/signup/store',[UserController::class,'signupFormPost'])->name('use
 
 Route::get('/job_offer',[UserController::class,'job_offer'])->name('user.job_offer');
 
-Route::get('/reg_org',[ReqOrgController::class,'req_org'])->name('reqorg.req_org');
-Route::post('/reg_org/store',[ReqOrgController::class,'req_orgPost'])->name('reqorg.req_org.store');
-
-Route::get('/post_job',[ReqOrgController::class,'post_job'])->name('reqorg.post_job');
-Route::post('/post_job/store',[ReqOrgController::class,'post_jobStore'])->name('reqorg.post_job.store');
-
 Route::get('/admin/login',[User::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.post');
 
@@ -64,6 +58,11 @@ Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.po
 
 
         Route::get('/details/org_registration', [DetailsController::class, 'org_registration'])->name('details.org_registration');
+        Route::get('/details/reg_org', [DetailsController::class, 'reg_org'])->name('details.reg_org');
+        Route::get('/details/reg_org/store', [DetailsController::class, 'req_orgPost'])->name('details.req_org.store');
+        Route::get('/details/post_job', [DetailsController::class, 'post_job'])->name('details.post_job');
+        Route::post('details/post_job/store',[DetailsController::class,'post_jobStore'])->name('details.post_job.store');
+
 
 
 

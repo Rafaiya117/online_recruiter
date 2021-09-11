@@ -65,7 +65,7 @@
             <div class="panel panel-primary">
                 <div class="panel-body">
 
-                    <form action="{{route('reqorg.req_org.store')}}" type="form" method="Post">
+                    <form action="{{route('details.req_org.store')}}" type="form" method="Post">
                         @csrf
                         <div class="form-group">
                             <h2>Create account</h2>
