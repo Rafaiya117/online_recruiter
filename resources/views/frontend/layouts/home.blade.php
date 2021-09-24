@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <div class="mb-5 text-center">
                         <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
+                        <p></p>
                     </div>
                     <form method="post" class="search-jobs-form">
                         <div class="row mb-5">
@@ -76,7 +76,7 @@
                 @foreach($post__jobs as $post__job)
 
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                    <a href="job-listing"></a>
+                    <a href="#"></a>
 
                     <div class="job-listing-logo">
                         <img src="{{url('frontend/images/kodeeo.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
@@ -97,34 +97,18 @@
 
                             <span href="#">Apply</span>
                         </div>
-                    </div>
+                        <di>
+                            <span>View</span>
+                        </di>
 
+                    </div>
                 </li>
 
 {{--                loop end--}} @endforeach
             </ul>
 
-
-
-
-            <div class="row pagination-wrap">
-                <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-                    <span>Showing 1-7 Of 43,167 Jobs</span>
-                </div>
-                <div class="col-md-6 text-center text-md-right">
-                    <div class="custom-pagination ml-auto">
-                        <a href="#" class="prev">Prev</a>
-                        <div class="d-inline-block">
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                        </div>
-                        <a href="{{route('user.job_offer')}}" class="next">Next</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
+
     </section>
+
 @endsection

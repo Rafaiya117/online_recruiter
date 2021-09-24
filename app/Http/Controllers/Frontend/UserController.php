@@ -37,4 +37,10 @@ class UserController extends Controller
         $categories=Category::all();
         return view('frontend.layouts.job_offer',compact('post__jobs','categories'));
     }
+    public function apply(){
+       return view('frontend.layouts.apply');
+    }
+    public function login(){
+        return view('frontend.layouts.login');
+    }
 }

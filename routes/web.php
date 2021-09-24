@@ -38,8 +38,9 @@ Route::get('/',[Home::class,'home'])->name('home');
 
 Route::get('/signup',[UserController::class,'signupForm'])->name('user.signup');
 Route::post('/signup/store',[UserController::class,'signupFormPost'])->name('user.signup.store');
-
 Route::get('/job_offer',[UserController::class,'job_offer'])->name('user.job_offer');
+Route::get('/apply',[UserController::class,'apply'])->name('user.apply');
+Route::get('/login',[UserController::class,'login'])->name('user.login');
 
 Route::get('/admin/login',[User::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.post');
