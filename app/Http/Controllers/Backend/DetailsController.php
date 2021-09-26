@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post_Job;
 use App\Models\Req_org;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class DetailsController extends Controller
