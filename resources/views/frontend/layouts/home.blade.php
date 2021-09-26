@@ -79,7 +79,7 @@
                     <a href="#"></a>
 
                     <div class="job-listing-logo">
-                        <img src="{{url('frontend/images/kodeeo.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        <img src="{{url('/uploads/'.$post__job->image)}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
                     </div>
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">

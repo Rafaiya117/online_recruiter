@@ -42,6 +42,14 @@ class DetailsController extends Controller
     }
     public function post_jobStore(Request $request){
 
+        $fileName='';
+        if($request->hasFile('image'))
+        {
+            $file=$request->file('image');
+            //generate file name here
+            $fileName=date('Ymdhms').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads',$fileName);
+        }
 
 
         Post_Job::create([
@@ -57,6 +65,7 @@ class DetailsController extends Controller
             'responsibilities'=>$request->responsibilities,
             'skill'=>$request->skill,
             'education'=>$request->education,
+            'image'=>$fileName
 
 
         ]);

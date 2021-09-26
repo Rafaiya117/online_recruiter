@@ -27,6 +27,7 @@ class CreatePostJobsTable extends Migration
             $table->text('responsibilities');
             $table->text('skill');
             $table->text('education');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
