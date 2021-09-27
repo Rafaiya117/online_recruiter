@@ -11,4 +11,5 @@ class HomeController extends Controller
         $link='Dashboard / home';
         return view('backend.layouts.home',compact('title','link'));
     }
+
 }

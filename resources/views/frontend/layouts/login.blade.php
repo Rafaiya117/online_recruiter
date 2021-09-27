@@ -14,7 +14,7 @@
 
     .login-dark {
         height:1000px;
-        background:#475d62 url('https://th.bing.com/th/id/OIP.JM1GtVl06-4R6j6ag-n3hgHaEK?pid=ImgDet&rs=1');
+        background:#475d62 url('https://www.nordusk.in/media/catalog/category/officespace-icon.jpg');
         background-size:cover;
         position:relative;
     }
@@ -90,7 +90,13 @@
 
 <body>
 <div class="login-dark">
-    <form method="post">
+
+    @if(session()->has('message'))
+        <span class="alert alert-danger">{{session()->get('message')}}</span>
+    @endif
+
+    <form method="post" action="{{route('user.do.login')}}" type="form">
+        @csrf
         <h2 class="sr-only">Login Form</h2>
         <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
         <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>

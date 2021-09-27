@@ -31,7 +31,7 @@
             font-family: 'Open Sans', sans-serif;
             background: #092756;
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
-            background-image: url('https://static3.makeuseofimages.com/wordpress/wp-content/uploads/2020/06/windows-auto-update.jpg');
+            background-image: url('https://www.mojo.ae/wp-content/uploads/2014/11/Office-Room-Interior-Design-Wallpaper-1280x960.jpg');
             background-position:center ;
             background-size: cover;
         }

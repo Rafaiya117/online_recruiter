@@ -16,6 +16,8 @@ use App\Http\Controllers\Backend\CandidatesController;
 
 use App\Http\Controllers\Backend\OrganizationController;
 
+use App\Http\Controllers\Backend\LocationController;
+
 use App\Http\Controllers\Backend\UserController as User;
 
 use App\Http\Controllers\Frontend\UserController;
@@ -38,9 +40,18 @@ Route::get('/',[Home::class,'home'])->name('home');
 
 Route::get('/signup',[UserController::class,'signupForm'])->name('user.signup');
 Route::post('/signup/store',[UserController::class,'signupFormPost'])->name('user.signup.store');
+
+Route::group(['prefix'=>'user','middleware'=>'auth'],function (){
+    Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+
+});
+
+
 Route::get('/job_offer',[UserController::class,'job_offer'])->name('user.job_offer');
 Route::get('/apply',[UserController::class,'apply'])->name('user.apply');
+Route::post('/apply/store',[UserController::class,'applyStore'])->name('user.apply.store');
 Route::get('/login',[UserController::class,'login'])->name('user.login');
+Route::post('/login/post',[UserController::class,'doLogin'])->name('user.do.login');
 
 Route::get('/admin/login',[User::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.post');
@@ -56,6 +67,7 @@ Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.po
         Route::get('/questions/add_Ques', [QuestionController::class, 'add_Ques'])->name('question.add_Ques');
         Route::post('/questions/store', [QuestionController::class, 'store'])->name('question.store');
         Route::get('/questions/create', [QuestionController::class, 'create'])->name('question.create');
+
 
 
         Route::get('/details/org_registration', [DetailsController::class, 'org_registration'])->name('details.org_registration');

@@ -17,23 +17,18 @@
                                 <input type="text" class="form-control form-control-lg" placeholder="Job title, Company...">
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                @foreach($post__jobs as $post__job)
                                 <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region">
-                                    <option>Anywhere</option>
-                                    <option>San Francisco</option>
-                                    <option>Palo Alto</option>
-                                    <option>New York</option>
-                                    <option>Manhattan</option>
-                                    <option>Ontario</option>
-                                    <option>Toronto</option>
-                                    <option>Kansas</option>
-                                    <option>Mountain View</option>
+                                    <option>{{$post__job->organization_address}}</option>
                                 </select>
+                                @endforeach
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                @foreach($post__jobs as $post__job)
                                 <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type">
-                                    <option>Part Time</option>
-                                    <option>Full Time</option>
+                                    <option>{{$post__job->type}}</option>
                                 </select>
+                                @endforeach
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search"><span class="icon-search icon mr-2"></span>Search Job</button>
@@ -94,8 +89,11 @@
                             <span class="badge badge-danger">Part Time</span>
                         </div>
                         <div class="job-listing-meta">
-
-                            <span href="#">Apply</span>
+                            <a href="{{route('user.apply')}}">
+                            <span class="btn btn-success" >
+                                Apply
+                            </span>
+                            </a>
                         </div>
                         <di>
                             <span>View</span>

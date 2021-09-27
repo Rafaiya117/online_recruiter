@@ -84,6 +84,11 @@
             </div>
 
             <div class="card">
+                <label for="type" class="form-label">Job type</label>
+                <input placeholder="Enter type" type="text" class="form-control" id="type" name="type">
+            </div>
+
+            <div class="card">
                 <label for="image" class="form-label">Organization Logo</label>
                 <input  type="file" class="form-control" id="image" name="image">
             </div>

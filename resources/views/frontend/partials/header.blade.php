@@ -14,8 +14,7 @@
                     <li class="has-children">
                         <a href="job-listings.html">Sign Up</a>
                     <ul class="dropdown">
-                        <li><a href="{{route('user.signup')}}"> User Sign Up</a></li>
-                        <li><a href="{{route('details.reg_org')}}">Organization Signup</a></li>
+                        <li><a href="{{route('user.signup')}}">Sign Up</a></li>
                     </ul>
                     </li>
                     <li class="d-lg-none"><a href="{{route('user.login')}}">Log In</a></li>

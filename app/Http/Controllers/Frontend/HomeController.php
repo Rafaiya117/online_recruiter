@@ -12,4 +12,5 @@ class HomeController extends Controller
         $post__jobs =Post_Job::paginate(10);
         return view('frontend.layouts.home',compact('post__jobs'));
 }
+
 }

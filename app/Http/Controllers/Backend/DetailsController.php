@@ -19,7 +19,7 @@ class DetailsController extends Controller
     }
 
     public function req_org(){
-        return view('backend.layouts.req_org');
+        return view('backend.layouts.details.req_org');
     }
     public function req_orgPost(Request $request){
 //        dd($request->all());
@@ -66,6 +66,7 @@ class DetailsController extends Controller
             'responsibilities'=>$request->responsibilities,
             'skill'=>$request->skill,
             'education'=>$request->education,
+            'type'=>$request->type,
             'image'=>$fileName
 
 
