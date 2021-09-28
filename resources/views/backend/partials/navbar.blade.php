@@ -108,6 +108,13 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
 
+            <li>
+                <a class="nav-link" href="{{route('user.list')}}">
+                    <i class="fas fa-file"></i>
+                    <p>User List</p>
+                </a>
+            </li>
+
         </ul>
     </div>
 </div>

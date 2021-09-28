@@ -36,13 +36,6 @@ Route::get('/',[Home::class,'home'])->name('home');
 
 Route::get('/signup',[UserController::class,'signupForm'])->name('user.signup');
 Route::post('/signup/store',[UserController::class,'signupFormPost'])->name('user.signup.store');
-
-Route::group(['prefix'=>'user','middleware'=>'auth'],function (){
-    Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
-
-});
-
-
 Route::get('/job_offer',[UserController::class,'job_offer'])->name('user.job_offer');
 Route::get('/apply',[UserController::class,'apply'])->name('user.apply');
 Route::post('/apply/store',[UserController::class,'applyStore'])->name('user.apply.store');
@@ -53,8 +46,12 @@ Route::post('/registration/store',[UserController::class,'registrationPost'])->n
 
 
 
+
+
+
 Route::get('/admin/login',[User::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.post');
+Route::get('/user',[User::class,'userList'])->name('user.list');
 
 
 

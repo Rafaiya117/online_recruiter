@@ -42,5 +42,11 @@ class UserController extends Controller
         return redirect()->route('admin.login');
     }
 
+    public function userList()
+    {
+
+        $user=User::where('role','=','user')->get();
+        return view('backend.layouts.user',compact('user'));
+    }
 
 }

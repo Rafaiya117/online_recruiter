@@ -71,36 +71,28 @@ class UserController extends Controller
 
         return view('frontend.layouts.login');
     }
+
+
     public function doLogin(Request $request)
     {
-
-        $credentials = $request->except('_token');
-
+       // dd($request->all());
+        $credentials=$request->except('_token');
 
         if(Auth::attempt($credentials))
         {
-            if(auth()->user()->role=='user')
-            {
-                return redirect()->route('home');
-            }else
-            {
-                Auth::logout();
-                return redirect()->route('user.signup');
-            }
-
-
+            return redirect()->route('home');
             //user logged in
-
         }
-
-            return redirect()->back()->with('message', 'invalid user info.');
-        }
+        return redirect()->back()->with('message','invalid user info.');
+    }
 
     public function logout()
     {
         Auth::logout();
         return redirect()->route('user.login');
     }
+
+
 
     public  function registration(){
 
