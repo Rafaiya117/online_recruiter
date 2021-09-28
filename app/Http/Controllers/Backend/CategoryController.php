@@ -29,7 +29,7 @@ class CategoryController extends Controller
 
         Category::create([
             'name'=>$request->category_name,
-            'details'=>$request->description
+            'organization'=>$request->description
         ]);
 
         return redirect()->route('category.list');

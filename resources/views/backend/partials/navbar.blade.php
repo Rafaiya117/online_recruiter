@@ -19,7 +19,7 @@ Tip 2: you can also add an image using data-image tag
             </li>
 
             <li class="dropdown nav-item active">
-                <a class="nav-link" href="{{route('details.post_job')}}" >
+                <a class="nav-link" href="{{route('organization.post_job')}}" >
                     <i class="fas fa-plus-circle"></i>
                     <p>Post Job</p>
                 </a>
@@ -49,12 +49,17 @@ Tip 2: you can also add an image using data-image tag
                 </a>
                 <div class="collapse" id="viewdetails">
                     <ul class="nav">
-
-
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{route('details.org_registration')}}">
+                            <a class="nav-link" href="{{route('organization.org_registration')}}">
                                 <span class="sidebar-mini"></span>
                                 <span class="sidebar-normal"> Organization Registration Details </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('details.candidatelist')}}">
+                                <span class="sidebar-mini"></span>
+                                <span class="sidebar-normal"> Applicants Details </span>
                             </a>
                         </li>
 
@@ -103,12 +108,6 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
 
-            <li>
-                <a class="nav-link" href="#">
-                    <i class="fas fa-file"></i>
-                    <p>Resume</p>
-                </a>
-            </li>
         </ul>
     </div>
 </div>

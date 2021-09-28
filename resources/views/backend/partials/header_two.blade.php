@@ -14,7 +14,7 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('details.post_job')}}">
+                    <a class="nav-link" href="{{route('organization.post_job')}}">
                         <span class="no-icon"></span>
                     </a>
                 </li>

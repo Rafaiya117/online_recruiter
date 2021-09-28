@@ -10,19 +10,15 @@ use App\Http\Controllers\Backend\CategoryController;
 
 use App\Http\Controllers\Backend\QuestionController;
 
-use App\Http\Controllers\Backend\DetailsController;
-
-use App\Http\Controllers\Backend\CandidatesController;
-
 use App\Http\Controllers\Backend\OrganizationController;
 
-use App\Http\Controllers\Backend\LocationController;
+use App\Http\Controllers\Backend\DetailsController;
 
 use App\Http\Controllers\Backend\UserController as User;
 
 use App\Http\Controllers\Frontend\UserController;
 
-use App\Http\Controllers\Frontend\ReqOrgController;
+
 
 
 
@@ -52,6 +48,10 @@ Route::get('/apply',[UserController::class,'apply'])->name('user.apply');
 Route::post('/apply/store',[UserController::class,'applyStore'])->name('user.apply.store');
 Route::get('/login',[UserController::class,'login'])->name('user.login');
 Route::post('/login/post',[UserController::class,'doLogin'])->name('user.do.login');
+Route::get('/registration',[UserController::class,'registration'])->name('user.registration');
+Route::post('/registration/store',[UserController::class,'registrationPost'])->name('user.registration.store');
+
+
 
 Route::get('/admin/login',[User::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.post');
@@ -70,12 +70,9 @@ Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.po
 
 
 
-        Route::get('/details/org_registration', [DetailsController::class, 'org_registration'])->name('details.org_registration');
-        Route::get('/details/reg_org', [DetailsController::class, 'reg_org'])->name('details.reg_org');
-        Route::get('/details/reg_org/store', [DetailsController::class, 'req_orgPost'])->name('details.req_org.store');
-        Route::get('/details/post_job', [DetailsController::class, 'post_job'])->name('details.post_job');
-        Route::post('details/post_job/store',[DetailsController::class,'post_jobStore'])->name('details.post_job.store');
-
+        Route::get('/organization/org_registration', [OrganizationController::class, 'org_registration'])->name('organization.org_registration');
+        Route::get('/organization/post_job', [OrganizationController::class, 'post_job'])->name('organization.post_job');
+        Route::post('organization/post_job/store',[OrganizationController::class,'post_jobStore'])->name('organization.post_job.store');
 
 
 
@@ -83,6 +80,11 @@ Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.po
         Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
         Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
         Route::get('/category/{id}/post__jobs', [CategoryController::class, 'allJob'])->name('category.post__job');
+
+
+        Route::get('/details/candidatelist',[DetailsController::class,'candidatelist'])->name('details.candidatelist');
+        Route::get('/details/view',[DetailsController::class,'view'])->name('details.view');
+
 
     });
 

@@ -14,9 +14,9 @@
         <a href="#!" class="dash-nav-item dash-nav-dropdown-toggle">
             <i class="fas fa-building"></i>View Details </a>
         <div class="dash-nav-dropdown-menu">
-            <a href="{{route('details.organization')}}" class="dash-nav-dropdown-item"><i class="fas fa-arrow-right"> Organization Details</i></a>
-            <a href="{{route('details.job')}}" class="dash-nav-dropdown-item"><i class="fas fa-arrow-right"> Job Details</i></a>
-            <a href="{{route('details.requirement')}}" class="dash-nav-dropdown-item"><i class="fas fa-arrow-right"> Requirement Details</i></a>
+            <a href="{{route('organization.organization')}}" class="dash-nav-dropdown-item"><i class="fas fa-arrow-right"> Organization Details</i></a>
+            <a href="{{route('organization.job')}}" class="dash-nav-dropdown-item"><i class="fas fa-arrow-right"> Job Details</i></a>
+            <a href="{{route('organization.requirement')}}" class="dash-nav-dropdown-item"><i class="fas fa-arrow-right"> Requirement Details</i></a>
 
         </div>
     </div>

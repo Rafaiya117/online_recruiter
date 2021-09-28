@@ -10,11 +10,12 @@
                     <li><a href="#" class="nav-link active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li class="d-lg-none"><a href="{{route('details.post_job')}}"><span class="mr-2">+</span> Post a Job</a></li>
+                    <li class="d-lg-none"><a href="{{route('organization.post_job')}}"><span class="mr-2">+</span> Post a Job</a></li>
                     <li class="has-children">
-                        <a href="job-listings.html">Sign Up</a>
+                        <a >Sign Up</a>
                     <ul class="dropdown">
                         <li><a href="{{route('user.signup')}}">Sign Up</a></li>
+                        <li><a href="{{route('user.registration')}}">Organization Registration</a></li>
                     </ul>
                     </li>
                     <li class="d-lg-none"><a href="{{route('user.login')}}">Log In</a></li>

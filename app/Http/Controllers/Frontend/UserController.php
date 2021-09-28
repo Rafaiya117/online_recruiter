@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post_Job;
+use App\Models\Req_org;
 use App\Models\User;
 use App\Models\Apply;
 use Illuminate\Http\Request;
@@ -99,5 +100,24 @@ class UserController extends Controller
     {
         Auth::logout();
         return redirect()->route('user.login');
+    }
+
+    public  function registration(){
+
+        return view('frontend.layouts.registration');
+    }
+
+    public function registrationPost(Request $request){
+
+        Req_org::create([
+
+            'name'=>$request->organization_name,
+            'email'=>$request->organization_email,
+            'mobile'=>$request->organization_mobile,
+            'password'=>bcrypt($request->organization_email),
+
+        ]);
+        return redirect()->back()->with('success','User Registration Successful.');
+
     }
 }
