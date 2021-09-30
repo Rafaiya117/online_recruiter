@@ -30,7 +30,7 @@ class UserController extends Controller
             'password'=>bcrypt($request->customer_email),
         ]);
 
-        return redirect()->back()->with('success','User Registration Successful.');
+        return redirect()->route('home');
 
     }
 
@@ -76,14 +76,14 @@ class UserController extends Controller
     public function doLogin(Request $request)
     {
        // dd($request->all());
-        $credentials=$request->except('_token');
+       // $credentials=$request->except('_token');
 
-        if(Auth::attempt($credentials))
-        {
-            return redirect()->route('home');
+     //   if(Auth::attempt($credentials))
+       // {
+           // return redirect()->route('home');
             //user logged in
-        }
-        return redirect()->back()->with('message','invalid user info.');
+      //  }
+        return redirect()->route('home');
     }
 
     public function logout()
@@ -109,7 +109,14 @@ class UserController extends Controller
             'password'=>bcrypt($request->organization_email),
 
         ]);
-        return redirect()->back()->with('success','User Registration Successful.');
+        return redirect()->route('home');
 
+    }
+
+    public function search(){
+
+       $search_text = $_GET['query'];
+       $post__jobs=Post_Job::where('job_name','type','%'.$search_text.'%')->get();
+         return view('frontend.layouts.search',compact('post__jobs'));
     }
 }

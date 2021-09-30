@@ -15,6 +15,7 @@ class UserController extends Controller
     }
     public function loginPost(Request $request)
     {
+       // dd($request->all());
         $credentials=$request->except('_token');
 
         if(Auth::attempt($credentials))
@@ -22,7 +23,8 @@ class UserController extends Controller
             if(auth()->user()->role=='admin')
             {
                 return redirect()->route('dashboard');
-            }else
+            }
+            else
             {
                 Auth::logout();
                 return redirect()->route('user.signup');

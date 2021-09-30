@@ -34,6 +34,7 @@ use App\Http\Controllers\Frontend\UserController;
 */
 Route::get('/',[Home::class,'home'])->name('home');
 
+
 Route::get('/signup',[UserController::class,'signupForm'])->name('user.signup');
 Route::post('/signup/store',[UserController::class,'signupFormPost'])->name('user.signup.store');
 Route::get('/job_offer',[UserController::class,'job_offer'])->name('user.job_offer');
@@ -43,6 +44,7 @@ Route::get('/login',[UserController::class,'login'])->name('user.login');
 Route::post('/login/post',[UserController::class,'doLogin'])->name('user.do.login');
 Route::get('/registration',[UserController::class,'registration'])->name('user.registration');
 Route::post('/registration/store',[UserController::class,'registrationPost'])->name('user.registration.store');
+Route::get('/search',[UserController::class,'search'])->name('user.search');
 
 
 
