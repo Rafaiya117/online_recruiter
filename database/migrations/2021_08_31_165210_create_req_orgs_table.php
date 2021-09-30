@@ -20,6 +20,7 @@ class CreateReqOrgsTable extends Migration
 //            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('mobile');
+            $table->string('status')->default('pending');
             $table->rememberToken();
             $table->timestamps();
         });
