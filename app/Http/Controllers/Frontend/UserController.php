@@ -115,8 +115,8 @@ class UserController extends Controller
 
     public function search(){
 
-       $search_text = $_GET['query'];
-       $post__jobs=Post_Job::where('job_name','type','%'.$search_text.'%')->get();
-         return view('frontend.layouts.search',compact('post__jobs'));
+        $search_text = $_GET['query'];
+        $post__jobs=Post_Job::where('job_name','type','%'.$search_text.'%')->get();
+        return view('frontend.layouts.search',compact('post__jobs'));
     }
 }

@@ -14,18 +14,23 @@
                     <form method="get" class="search-jobs-form" action="{{route('user.search')}}">
                         <div class="row mb-5">
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                @foreach($post__jobs as $post__job)
-                                <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region" name="query" type="search">
-                                    <option>{{$post__job->organization_address}}</option>
-                                </select>
-                                @endforeach
+
+                                    <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type" name="query" type="search" >
+                                        @foreach($post__jobs as $post__job)
+                                        <option>{{$post__job->organization_address}}</option>
+                                        @endforeach
+                                    </select>
+
+
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                @foreach($post__jobs as $post__job)
-                                <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type" name="query" type="search">
-                                    <option>{{$post__job->type}}</option>
-                                </select>
-                                @endforeach
+
+                                    <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type" name="query" type="search">
+                                        @foreach($post__jobs as $post__job)
+                                        <option>{{$post__job->type}}</option>
+                                        @endforeach
+                                    </select>
+
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search"><span class="icon-search icon mr-2"></span>Search Job</button>
@@ -64,42 +69,42 @@
             </div>
 
             <ul class="job-listings mb-5">
-{{--                loop start--}}
+                {{--                loop start--}}
                 @foreach($post__jobs as $post__job)
 
-                <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                    <a href="#"></a>
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href="#"></a>
 
-                    <div class="job-listing-logo">
-                        <img src="{{url('/uploads/'.$post__job->image)}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
-                    </div>
+                        <div class="job-listing-logo">
+                            <img src="{{url('/uploads/'.$post__job->image)}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
 
-                    <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-                        <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                            <h2>{{$post__job->job_name}}</h2>
-                            <strong>{{$post__job->organization_name}}</strong>
-                        </div>
-                        <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                            <span class="icon-room"></span> {{$post__job->organization_address}}
-                        </div>
-                        <div class="job-listing-meta">
-                            <span class="badge badge-danger">Part Time</span>
-                        </div>
-                        <div class="job-listing-meta">
-                            <a href="{{route('user.apply')}}">
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>{{$post__job->job_name}}</h2>
+                                <strong>{{$post__job->organization_name}}</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <span class="icon-room"></span> {{$post__job->organization_address}}
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-danger">Part Time</span>
+                            </div>
+                            <div class="job-listing-meta">
+                                <a href="{{route('user.apply')}}">
                             <span class="btn btn-success" >
                                 Apply
                             </span>
-                            </a>
+                                </a>
+                            </div>
+                            <di>
+                                <span>View</span>
+                            </di>
+
                         </div>
-                        <di>
-                            <span>View</span>
-                        </di>
+                    </li>
 
-                    </div>
-                </li>
-
-{{--                loop end--}} @endforeach
+                    {{--                loop end--}} @endforeach
             </ul>
 
         </div>
