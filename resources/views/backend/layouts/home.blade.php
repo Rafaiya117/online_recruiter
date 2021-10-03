@@ -10,6 +10,11 @@
             <h1>Total User</h1>
             <p><h4>{{$user_count}}</h4></p>
         </div>
+        <div class="col-md-3" style="background-color: floralwhite; padding: 10px; margin-right: 20px">
+            <h1>Total Application</h1>
+            <p><h4>{{$cv_count}}</h4></p>
+        </div>
+
 
 
     </div>

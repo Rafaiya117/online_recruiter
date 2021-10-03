@@ -9,6 +9,11 @@
             <div class="col-xl-9">
                 <br>
                 <br>
+                @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
                 <form action="{{route('user.apply.store')}}" type="form" method="Post" enctype="multipart/form-data">
                     @csrf
                 <div class="card" style="border-radius: 15px;">

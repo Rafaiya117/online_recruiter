@@ -1,3 +1,6 @@
+@extends('frontend.master')
+@section('content')
+
 <style>
 
     body{
@@ -101,11 +104,6 @@
     }
 
 </style>
-@if(session()->has('success'))
-                <div class="alert alert-success">
-                    {{ session()->get('success') }}
-                </div>
-@endif
 
 <!DOCTYPE html>
 <html>
@@ -120,6 +118,12 @@
 </head>
 <body>
 <div class="registration-form">
+    <br><br>
+    @if(session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
     <form action="{{route('user.signup.store')}}" method="post" type="form">
         @csrf
         <div class="form-icon">
@@ -155,3 +159,4 @@
 <script src="assets/js/script.js"></script>
 </body>
 </html>
+@endsection

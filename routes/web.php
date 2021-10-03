@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Frontend\HomeController as Home;
 
+use App\Http\Controllers\Frontend\ViewController;
+
 use App\Http\Controllers\Backend\HomeController;
 
 use App\Http\Controllers\Backend\CategoryController;
@@ -45,10 +47,6 @@ Route::post('/login/post',[UserController::class,'doLogin'])->name('user.do.logi
 Route::get('/registration',[UserController::class,'registration'])->name('user.registration');
 Route::post('/registration/store',[UserController::class,'registrationPost'])->name('user.registration.store');
 Route::get('/search',[UserController::class,'search'])->name('user.search');
-
-
-
-
 
 
 Route::get('/admin/login',[User::class,'login'])->name('admin.login');

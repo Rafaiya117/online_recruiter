@@ -1,49 +1,27 @@
 @extends('frontend.master')
-
 @section('content')
-
-    <section class="site-section">
-        <div class="container">
-
-            <div class="row mb-5 justify-content-center">
-                <div class="col-md-7 text-center">
-
+    <div class="card-deck mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+            @foreach($post__jobs as $post__job)
+            <div class="col-md-4">
+                <img src="{{url('/uploads/'.$post__job->image)}}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title text-black">Name: {{$post__job->organization_name}}</h5>
+                    <p class="card-text text-black">Address: {{$post__job->organization_address}}</p>
+                    <p class="card-text "><small class="text-black">Position: {{$post__job->position}}</small></p>
+                    <p class="card-text"><small class="text-black">Description: {{$post__job->description}}</small></p>
+                    <p class="card-text"><small class="text-black">Responsibilities: {{$post__job->responsibilities}}</small></p>
+                    <p class="card-text"><small class="text-black">Skill: {{$post__job->skill}}</small></p>
+                    <p class="card-text"><small class="text-black">Qualification: {{$post__job->education}}</small></p>
+                    <p class="card-text"><small class="text-black">Type: {{$post__job->type}}</small></p>
+                    <p class="card-text"><small class="text-black">Salary: {{$post__job->salary}}</small></p>
+                    <a class="btn btn-success" href="{{route('user.apply')}}">Apply</a>
                 </div>
             </div>
-
-            <ul class="job-listings mb-5">
-                {{--                loop start--}}
-                @foreach($post__jobs as $post__job)
-                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                        <a href="job-single.html"></a>
-
-                        <div class="job-listing-logo">
-                            <img src="{{url('frontend/images/job_logo_1.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
-                        </div>
-
-                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                                <h2>{{$post__job->job_name}}</h2>
-                                <strong>{{$post__job->organization_name}}</strong>
-                            </div>
-                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                                <span class="icon-room"></span> {{$post__job->organization_address}}
-                            </div>
-                            <div class="job-listing-meta">
-                                <span class="badge badge-danger">Part Time</span>
-                            </div>
-                            <div class="job-listing-meta">
-
-                                <span class="badge badge-info">Apply</span>
-
-                            </div>
-                        </div>
-
-                    </li>
-
-                    {{--                loop end--}} @endforeach
-            </ul>
+            @endforeach
         </div>
-    </section>
+    </div>
     {{$post__jobs->links('pagination::bootstrap-4')}}
 @endsection

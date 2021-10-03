@@ -30,7 +30,7 @@ class UserController extends Controller
             'password'=>bcrypt($request->customer_email),
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success','Successful');
 
     }
 
@@ -83,7 +83,7 @@ class UserController extends Controller
            // return redirect()->route('home');
             //user logged in
       //  }
-        return redirect()->route('home');
+        return redirect()->back()->with('success','Successful');
     }
 
     public function logout()
@@ -109,7 +109,7 @@ class UserController extends Controller
             'password'=>bcrypt($request->organization_email),
 
         ]);
-        return redirect()->route('home');
+        return redirect()->back()->with('success','Successful');
 
     }
 
