@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Apply;
 use App\Models\Category;
 use App\Models\Post_Job;
 use App\Models\Req_org;
@@ -58,5 +59,33 @@ class OrganizationController extends Controller
 
         ]);
         return redirect()->back()->with('success','Job Post Successful.');
+    }
+    public function view(){
+
+        return view('backend.layouts.organization.view');
+    }
+    public function login(){
+
+        return view('backend.layouts.organization.login');
+    }
+
+    public function doLogin(Request $request)
+    {
+        // dd($request->all());
+        // $credentials=$request->except('_token');
+
+        //   if(Auth::attempt($credentials))
+        // {
+        // return redirect()->route('home');
+        //user logged in
+        //  }
+        return redirect()->route('organization.view');
+    }
+
+    public function list(){
+
+        $applies =Apply::paginate(10);
+
+        return view('backend.layouts.organization.list',compact('applies'));
     }
 }

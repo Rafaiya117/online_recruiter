@@ -4,13 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Frontend\HomeController as Home;
 
-use App\Http\Controllers\Frontend\ViewController;
-
 use App\Http\Controllers\Backend\HomeController;
 
 use App\Http\Controllers\Backend\CategoryController;
-
-use App\Http\Controllers\Backend\QuestionController;
 
 use App\Http\Controllers\Backend\OrganizationController;
 
@@ -49,6 +45,21 @@ Route::post('/registration/store',[UserController::class,'registrationPost'])->n
 Route::get('/search',[UserController::class,'search'])->name('user.search');
 
 
+
+Route::get('/organization/view',[OrganizationController::class,'view'])->name('organization.view');
+Route::get('/organization/post_job', [OrganizationController::class, 'post_job'])->name('organization.post_job');
+Route::post('organization/post_job/store',[OrganizationController::class,'post_jobStore'])->name('organization.post_job.store');
+Route::get('/organization/login', [OrganizationController::class, 'login'])->name('organization.login');
+Route::post('/organization/login/post',[OrganizationController::class,'doLogin'])->name('organization.do.login');
+Route::get('/organization/list',[OrganizationController::class,'list'])->name('organization.list');
+
+
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+Route::get('/category/listtwo',[CategoryController::class,'listtwo'])->name('category.listtwo');
+
+
+
 Route::get('/admin/login',[User::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[User::class,'loginPost'])->name('admin.login.post');
 Route::get('/user',[User::class,'userList'])->name('user.list');
@@ -63,22 +74,11 @@ Route::get('/user',[User::class,'userList'])->name('user.list');
         Route::get('/rejected/{id}',[HomeController::class,'rejectRequest'])->name('request.reject');
         Route::get('/logout', [User::class, 'logout'])->name('logout');
 
-        Route::get('/questions/_list', [QuestionController::class, '_list'])->name('question._list');
-        Route::get('/questions/add_Ques', [QuestionController::class, 'add_Ques'])->name('question.add_Ques');
-        Route::post('/questions/store', [QuestionController::class, 'store'])->name('question.store');
-        Route::get('/questions/create', [QuestionController::class, 'create'])->name('question.create');
-
-
 
         Route::get('/organization/org_registration', [OrganizationController::class, 'org_registration'])->name('organization.org_registration');
-        Route::get('/organization/post_job', [OrganizationController::class, 'post_job'])->name('organization.post_job');
-        Route::post('organization/post_job/store',[OrganizationController::class,'post_jobStore'])->name('organization.post_job.store');
-
 
 
         Route::get('/categories', [CategoryController::class, 'list'])->name('category.list');
-        Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
-        Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
         Route::get('/category/{id}/post__jobs', [CategoryController::class, 'allJob'])->name('category.post__job');
 
 

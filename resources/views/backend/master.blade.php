@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{url('backend/css/spur.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
     <script src="{{url('/js/chart-js-config.js')}}"></script>
-    <title>Online_Recruiter</title>
+    <title>Online Job_Recruiter</title>
 </head>
 
 <body>

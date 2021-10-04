@@ -10,6 +10,8 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
             <th scope="col">Description</th>
         </tr>
         </thead>
@@ -20,6 +22,8 @@
             <tr>
                 <th scope="row">{{$key+1}}</th>
                 <td>{{$data->job_name}}</td>
+                <td>{{$data->organization_address}}</td>
+                <td>{{$data->organization_email}}</td>
                 <td>{{$data->description}}</td>
 
             </tr>

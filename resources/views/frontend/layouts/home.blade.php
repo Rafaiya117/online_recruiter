@@ -57,20 +57,14 @@
 
     </section>
 
-
-
     <section class="site-section">
         <div class="container">
             <h3>Browse Category</h3>
             <div class="row">
-            <div class="card  col-md-12 col-sm-10">
-
-                    <ol><a href="{{route('user.job_offer')}}"><i class="fas fa-arrow-right">IT</i></a></ol>
-                <ol><a href="#"><i class="fas fa-arrow-right">Developer</i></a></ol>
-                <ol><a href="#"><i class="fas fa-arrow-right">Communication</i></a></ol>
-                <ol><a href="#"><i class="fas fa-arrow-right">Developer</i></a></ol>
-                <ol><a href="#"><i class="fas fa-arrow-right">Communication</i></a></ol>
-
+            <div class="card  col-md-12 ">
+@foreach($categories as $cat)
+                    <ol data-value="{{$cat->id}}"><a href="{{route('user.job_offer')}}"><i class="fas fa-angle-right">{{$cat->name}}</i></a></ol>
+                @endforeach
             </div>
             </div>
         </div>

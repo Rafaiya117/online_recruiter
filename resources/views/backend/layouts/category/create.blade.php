@@ -1,8 +1,8 @@
-@extends('backend.master_three')
+@extends('backend.master')
 
 @section('content')
 
-    <h6>Create category</h6>
+    <h1>Create category</h1>
 
 
     <form action="{{route('category.store')}}" method="post">

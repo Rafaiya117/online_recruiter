@@ -1,4 +1,4 @@
-@extends('backend.master_three')
+@extends('backend.master')
 @section('content')
     <table class="table">
         <thead>
@@ -29,6 +29,3 @@
     {{$applies->links('pagination::bootstrap-4')}}
 
 @endsection
-
-
-

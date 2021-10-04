@@ -1,4 +1,4 @@
-@extends('backend.master_three')
+@extends('backend.master')
 @section('content')
 <style>
     body {

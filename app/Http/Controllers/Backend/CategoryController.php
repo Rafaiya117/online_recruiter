@@ -19,6 +19,12 @@ class CategoryController extends Controller
         return view('backend.layouts.category.list',compact('categories'));
     }
 
+    public function listtwo(){
+
+        $categories=Category::all();
+        return view('backend.layouts.category.listtwo',compact('categories'));
+    }
+
     public function create()
     {
         return view('backend.layouts.category.create');
@@ -32,7 +38,7 @@ class CategoryController extends Controller
             'organization'=>$request->description
         ]);
 
-        return redirect()->route('category.list');
+        return redirect()->route('category.listtwo');
     }
 
     public function allJob($id)
