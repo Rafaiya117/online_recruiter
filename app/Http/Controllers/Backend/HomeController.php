@@ -29,7 +29,6 @@ class HomeController extends Controller
         return view('backend.report-data',compact('post__jobs'));
 
     }
-
     public function acceptRequest($id)
     {
         $req_orgs=Req_org::find($id);
@@ -40,6 +39,12 @@ class HomeController extends Controller
         return redirect()->back();
 
     }
-
+ public function rejectRequest($id){
+        $req_orgs=Req_org::find($id);
+        $req_orgs->update([
+           'status'=>'rejected'
+        ]);
+        return redirect()->back();
+ }
 
 }

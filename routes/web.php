@@ -60,6 +60,7 @@ Route::get('/user',[User::class,'userList'])->name('user.list');
         Route::get('/', [HomeController::class, 'home'])->name('dashboard');
         Route::get('/report',[HomeController::class,'report'])->name('report');
         Route::get('/accepted/{id}',[HomeController::class,'acceptRequest'])->name('request.accept');
+        Route::get('/rejected/{id}',[HomeController::class,'rejectRequest'])->name('request.reject');
         Route::get('/logout', [User::class, 'logout'])->name('logout');
 
         Route::get('/questions/_list', [QuestionController::class, '_list'])->name('question._list');
