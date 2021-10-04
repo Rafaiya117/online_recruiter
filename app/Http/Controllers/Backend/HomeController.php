@@ -24,9 +24,11 @@ class HomeController extends Controller
     public function report()
     {
         $post__jobs=Post_Job::all();
+        $user=User::all();
+        $applies=Apply::all();
 //        dd($ambulance);
 
-        return view('backend.report-data',compact('post__jobs'));
+        return view('backend.report-data',compact('post__jobs','user','applies'));
 
     }
     public function acceptRequest($id)
